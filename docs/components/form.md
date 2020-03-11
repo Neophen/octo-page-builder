@@ -1,6 +1,8 @@
-# Input
+# Form
 
-<Demo componentName="examples-input-doc" />
+## Example
+
+<Demo componentName="examples-form-doc" />
 
 ## Code
 ```html

@@ -1,11 +1,11 @@
 <template>
-  <div class="octo-tags">
-    <slot />
+  <div>
+    <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: "OTaglist"
+  name: "OForm"
 };
 </script>

@@ -1,27 +1,27 @@
 {
-  "name": "@mykolasm/octo-ui",
-  "version": "0.1.26",
+  "name": "@mykolasm/octo-form",
+  "version": "0.1.1",
   "private": false,
-  "main": "dist/octo-ui.umd.min.js",
-  "unpkg": "dist/octo-ui.umd.min.js",
-  "jsdelivr": "dist/octo-ui.umd.min.js",
+  "main": "dist/octo-form.umd.min.js",
+  "unpkg": "dist/octo-form.umd.min.js",
+  "jsdelivr": "dist/octo-form.umd.min.js",
   "author": "Mykolas Mankevicius",
   "license": "MIT",
   "description": "",
   "files": [
     "dist/*"
   ],
-  "homepage": "https://octo-ui.netlify.com/",
+  "homepage": "https://octo-form.netlify.com/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Neophen/octo-ui.git"
+    "url": "https://github.com/Neophen/octo-form.git"
   },
   "bugs": {
-    "url": "https://github.com/Neophen/octo-ui/issues"
+    "url": "https://github.com/Neophen/octo-form/issues"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name octo-ui src/main.js",
+    "build": "vue-cli-service build --target lib --name octo-form src/main.js",
     "prepublishOnly": "$npm_execpath build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
@@ -30,6 +30,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@mykolasm/octo-ui": "^0.1.27",
     "@popperjs/core": "^2.0.6",
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
@@ -55,14 +56,16 @@
     "vue": "^2.6.11",
     "@vue/composition-api": "^0.4.0",
     "@popperjs/core": "^2.0.6",
-    "portal-vue": "^2.1.7"
+    "portal-vue": "^2.1.7",
+    "@mykolasm/octo-ui": "latest"
   },
   "keywords": [
     "vue",
     "vuejs",
     "octafest",
-    "octo-ui",
-    "ui",
+    "octo-form",
+    "form",
+    "builder",
     "lib"
   ],
   "gitHooks": {

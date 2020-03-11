@@ -2,14 +2,14 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'Octo UI',
-      description: 'Documentation site for the Octo UI library plugin'
+      title: 'Octo Form',
+      description: 'Documentation site for the Octo Form library plugin'
     }
   },
 
   themeConfig: {
     repoLabel: 'Contribute!',
-    repo: 'https://github.com/Neophen/octo-ui',
+    repo: 'https://github.com/Neophen/octo-form',
     docsDir: 'docs',
     editLinks: true,
     docsBranch: 'dev',
@@ -30,7 +30,7 @@ module.exports = {
         nav: [
           { text: 'Getting Started', link: '/guide' },
           { text: 'Components', link: '/components/' },
-          { text: 'GitHub', link: 'https://github.com/Neophen/octo-ui' }
+          { text: 'GitHub', link: 'https://github.com/Neophen/octo-form' }
         ],
         sidebar: {
           '/components/': [
@@ -38,21 +38,7 @@ module.exports = {
               title: 'Components',
               collapsable: false,
               children: [
-                'autocomplete',
-                'search-select',
-                'typography',
-                'button',
-                'field',
-                'checkbox',
-                'radio',
-                'tag',
-                'tags',
-                'tabs',
-                'switch',
-                'modal',
-                'dropdown',
-                'icon',
-                'input',
+                'form',
               ]
             }
           ]

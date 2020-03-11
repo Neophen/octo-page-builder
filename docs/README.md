@@ -10,5 +10,5 @@ features:
     details: No dependencies
   - title: Super customizable
     details: Customize to your hearts content
-footer: Octo UI 2020
+footer: Octo Form 2020
 ---

@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`ORadio render correctly 1`] = `<label class="octo-radio"><input type="radio" class="octo-radio__input" value="false"> <span class="octo-radio__mark"></span> <span class="octo-radio__label"></span></label>`;

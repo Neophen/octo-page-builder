@@ -1,6 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`OSwitch render correctly 1`] = `
-<label class="octo-switch is-rounded">
-  <!----> <input type="checkbox" true-value="true" class="octo-switch__input" value="false"> <span class="octo-switch__check"></span> <span class="octo-switch__label is-right"></span></label>
-`;
