@@ -1,8 +1,8 @@
-# octo-ui
+# octo-form
 
 ## Docs
 
-[octo-ui.com](https://octo-form.netlify.com/)
+[octo-form.com](https://octo-form.netlify.com/)
 
 ## Project setup
 ```

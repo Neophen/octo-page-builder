@@ -11,11 +11,12 @@
     <o-input
       class="w-full"
       v-model.trim.lazy="innerValue"
-      type="text"
+      :type="fieldType"
       :key="key"
       :name="key"
       :disabled="disabled"
       :maxlength="maxlength"
+      :autocomplete="autocomplete"
       :placeholder="placeholder"
     ></o-input>
   </o-field>
@@ -25,7 +26,7 @@
 import { fieldMixin } from "../../utils/fieldMixin.js";
 import { vModelMixin } from "../../utils/vModelMixin.js";
 export default {
-  name: "OctoForm",
+  name: "OctoFormText",
   mixins: [vModelMixin, fieldMixin]
 };
 </script>

@@ -11,7 +11,8 @@
     <o-input
       class="w-full"
       v-model.trim.lazy="innerValue"
-      type="text"
+      type="password"
+      password-reveal
       :key="key"
       :name="key"
       :disabled="disabled"
@@ -25,7 +26,7 @@
 import { fieldMixin } from "../../utils/fieldMixin.js";
 import { vModelMixin } from "../../utils/vModelMixin.js";
 export default {
-  name: "OctoForm",
+  name: "OctoFormPassword",
   mixins: [vModelMixin, fieldMixin]
 };
 </script>

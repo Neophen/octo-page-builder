@@ -10,7 +10,13 @@ module.exports = {
 
   configureWebpack: {
     output: { globalObject: "this" },
-    externals: ["vue", "@vue/composition-api", "@popperjs/core", "portal-vue"]
+    externals: [
+      "vue",
+      "@vue/composition-api",
+      "@popperjs/core",
+      "portal-vue",
+      "@mykolasm/octo-ui"
+    ]
   }
   // css: {
   //   loaderOptions: {
