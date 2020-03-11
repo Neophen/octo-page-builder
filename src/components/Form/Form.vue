@@ -107,9 +107,9 @@ export default {
 
       const formData = new FormData(refForm.value);
 
-      for (var pair of formData.entries()) {
-        console.log(pair[0] + ": " + pair[1]);
-      }
+      // for (var pair of formData.entries()) {
+      //   console.log(pair[0] + ": " + pair[1]);
+      // }
 
       blobs
         .filter(blob => blob)
