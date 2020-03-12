@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <octo-form :fieldset="filmFieldset" />
+    <div class="octo-box">
+      <octo-form :fieldset="filmFieldset" />
+    </div>
   </div>
 </template>
 

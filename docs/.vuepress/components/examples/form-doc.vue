@@ -1,18 +1,18 @@
 <template>
   <div class="container">
-    <div class="control-box mb-4">
+    <div class="octo-box  mb-4">
       <o-h size="3" class="mb-4">Basic</o-h>
       <octo-form :fieldset="loginFieldset" />
     </div>
-    <div class="control-box mb-4">
+    <div class="octo-box mb-4">
       <o-h size="3" class="mb-4">With icons</o-h>
       <octo-form :fieldset="contactFieldset" />
     </div>
-    <div class="control-box mb-4 mt-6">
+    <div class="octo-box mb-4 mt-6">
       <o-h size="3" class="mb-4">Basic numbered</o-h>
       <octo-form :fieldset="loginFieldsetNumbered" numbered/>
     </div>
-    <div class="control-box">
+    <div class="octo-box">
       <o-h size="3" class="mb-4">With icons numbered</o-h>
       <octo-form :fieldset="contactFieldsetNumbered" numbered/>
     </div>
