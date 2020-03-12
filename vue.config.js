@@ -15,7 +15,8 @@ module.exports = {
       "@vue/composition-api",
       "@popperjs/core",
       "portal-vue",
-      "@mykolasm/octo-ui"
+      "@mykolasm/octo-ui",
+      "vee-validate"
     ]
   }
   // css: {

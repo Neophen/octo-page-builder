@@ -28,10 +28,9 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "dependencies": {
-    "vee-validate": "^3.2.5"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "vee-validate": "^3.2.5",
     "@mykolasm/octo-ui": "^0.1.29",
     "@popperjs/core": "^2.1.0",
     "@vue/cli-plugin-babel": "~4.2.0",
@@ -59,7 +58,8 @@
     "@vue/composition-api": "^0.4.0",
     "@popperjs/core": "^2.0.6",
     "portal-vue": "^2.1.7",
-    "@mykolasm/octo-ui": "^0.1.*"
+    "@mykolasm/octo-ui": "^0.1.*",
+    "vee-validate": "^3.2.5"
   },
   "keywords": [
     "vue",

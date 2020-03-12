@@ -126,7 +126,7 @@ export const filmFieldset = {
     display: "Countries",
     type: "countries",
     validate: "required",
-    placeholder: "Please select countries...",
+    placeholder: "Select countries...",
   },
   film_release_year: {
     display: "Year of the release",
