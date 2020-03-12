@@ -347,63 +347,28 @@ export const contactFieldsetNumbered = {
 
 
 export const inputsFieldset = {
-  // cover_img: {
-  //   display: "Cover image",
-  //   type: "image",
-  //   validate: "required",
-  //   container: "img_film",
-  //   folder: "film_covers",
-  //   quality: 2,
-  //   width: 960,
-  //   height: 300
-  // },
-  // film_still_imgs: {
-  //   display: "Film stills",
-  //   type: "images",
-  //   max_files: 3,
-  //   container: "img_film",
-  //   folder: "film_stills",
-  //   quality: 3,
-  //   width: 640,
-  //   height: 360
-  // },
   section_input: {
-    display: "Section",
+    display: "Inputs",
     type: "section"
   },
   text: {
     display: "Text",
     type: "text",
     placeholder: 'Text input...',
-    validate: "required|max:150",
+    validate: "max:150",
     localizable: true
   },
-  list: {
-    display: "List",
-    type: "list",
-    placeholder: 'List input...',
-    localizable: true
-  },
-  rich_text: {
-    display: "Rich text input",
-    type: "list",
-    placeholder: 'Rich text input...',
-    localizable: true
-  },
-  // avatar: {
-  //   display: "Avatar",
-  //   type: "avatar",
-  //   quality: 2,
-  //   width: 300,
-  //   height: 300,
-  //   folder: "film_directors",
-  //   container: "img_film",
-  // },
   textarea: {
     display: "Textarea",
     type: "textarea",
     placeholder: 'Textarea input...',
-    validate: "required|max:1000",
+    validate: "max:1000",
+    localizable: true
+  },
+  rich_text: {
+    display: "Rich text input",
+    type: "textarea",
+    placeholder: 'Rich text input...',
     localizable: true
   },
   radio_group: {
@@ -420,6 +385,17 @@ export const inputsFieldset = {
     placeholder: 'Number input...',
     type: "number",
     min: 0,
+  },
+
+  year: {
+    display: "Year",
+    type: "year",
+    placeholder: "Please select a year..",
+    min: 2000,
+  },
+  section_tags: {
+    display: "Tags",
+    type: "section"
   },
   tag: {
     display: "Tag",
@@ -457,18 +433,6 @@ export const inputsFieldset = {
         value: 'tag-6'
       },
     ],
-  },
-  countries: {
-    display: "Countries",
-    type: "countries",
-    validate: "required",
-    placeholder: "Select countries...",
-  },
-  year: {
-    display: "Year",
-    type: "year",
-    placeholder: "Please select a year..",
-    min: 2000,
   },
   tags: {
     display: "Tags",
@@ -508,9 +472,44 @@ export const inputsFieldset = {
       },
     ],
   },
+  list: {
+    display: "List",
+    type: "list",
+    placeholder: 'List input...',
+    localizable: true
+  },
+  countries: {
+    display: "Countries",
+    type: "countries",
+    placeholder: "Select countries...",
+  },
   languages: {
     display: "Languages",
     type: "languages",
     placeholder: "Select languages..",
   },
+  section_Images: {
+    display: "Images",
+    type: "section"
+  },
+  // cover_img: {
+  //   display: "Cover image",
+  //   type: "image",
+  //   validate: "required",
+  //   container: "img_film",
+  //   folder: "film_covers",
+  //   quality: 2,
+  //   width: 960,
+  //   height: 300
+  // },
+  // film_still_imgs: {
+  //   display: "Film stills",
+  //   type: "images",
+  //   max_files: 3,
+  //   container: "img_film",
+  //   folder: "film_stills",
+  //   quality: 3,
+  //   width: 640,
+  //   height: 360
+  // },
 };
