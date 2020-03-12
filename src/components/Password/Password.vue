@@ -9,8 +9,8 @@
     :hasValue="!!innerValue"
   >
     <o-input
-      class="w-full"
-      v-model.trim.lazy="innerValue"
+      expanded
+      v-model.trim="innerValue"
       type="password"
       password-reveal
       :key="key"

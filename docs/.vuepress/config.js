@@ -39,6 +39,7 @@ module.exports = {
               collapsable: false,
               children: [
                 'form',
+                'film',
               ]
             }
           ]

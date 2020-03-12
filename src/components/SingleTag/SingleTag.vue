@@ -8,16 +8,19 @@
     :number="fieldNumber"
     :hasValue="!!innerValue"
   >
-    <o-input
-      v-model.trim="innerValue"
-      :type="fieldType"
-      :key="key"
-      :name="key"
-      :disabled="disabled"
-      :maxlength="maxlength"
-      :autocomplete="autocomplete"
+    <o-select
       :placeholder="placeholder"
-    ></o-input>
+      :disabled="disabled"
+      :name="key"
+      v-model="innerValue"
+    >
+      <option
+        v-for="option in options"
+        :value="option.value"
+        :key="option.value"
+        >{{ option.label }}</option
+      >
+    </o-select>
   </o-field>
 </template>
 
@@ -25,7 +28,7 @@
 import { fieldMixin } from "../../utils/fieldMixin.js";
 import { vModelMixin } from "../../utils/vModelMixin.js";
 export default {
-  name: "OctoFormText",
+  name: "OctoFormSingleTag",
   mixins: [vModelMixin, fieldMixin]
 };
 </script>

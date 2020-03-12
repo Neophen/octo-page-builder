@@ -9,13 +9,14 @@
     :hasValue="!!innerValue"
   >
     <o-input
+      expanded
       v-model.trim="innerValue"
-      :type="fieldType"
+      type="textarea"
+      rows="10"
       :key="key"
       :name="key"
       :disabled="disabled"
       :maxlength="maxlength"
-      :autocomplete="autocomplete"
       :placeholder="placeholder"
     ></o-input>
   </o-field>
@@ -25,7 +26,7 @@
 import { fieldMixin } from "../../utils/fieldMixin.js";
 import { vModelMixin } from "../../utils/vModelMixin.js";
 export default {
-  name: "OctoFormText",
+  name: "OctoFormTextarea",
   mixins: [vModelMixin, fieldMixin]
 };
 </script>

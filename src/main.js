@@ -1,6 +1,6 @@
 import * as components from "./components";
 
-import { extend, localize } from "vee-validate";
+import { extend, localize } from "vee-validate/dist/vee-validate";
 import * as rules from "vee-validate/dist/rules";
 import en from "vee-validate/dist/locale/en.json";
 

@@ -9,7 +9,7 @@
     :hasValue="!!innerValue"
   >
     <o-input
-      class="w-full"
+      expanded
       v-model.trim.lazy="innerValue"
       type="text"
       :key="key"

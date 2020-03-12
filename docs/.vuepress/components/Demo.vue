@@ -109,13 +109,24 @@ export default {
 }
 
 .mr-2 {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .ml-2 {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 .field {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
+}
+
+.octo-form__radio-group {
+  display: flex;
+  align-items: center;
+}
+
+.octo-form__radio-group-item {
+  & + .octo-form__radio-group-item {
+    margin-left: 1rem;
+  }
 }
 </style>
