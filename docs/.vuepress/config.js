@@ -40,6 +40,7 @@ module.exports = {
               children: [
                 'form',
                 'film',
+                'inputs',
               ]
             }
           ]

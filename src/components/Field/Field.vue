@@ -21,8 +21,6 @@
 
 <script>
 import { computed, getCurrentInstance } from "@vue/composition-api";
-import { ValidationProvider } from "vee-validate";
-
 import { useVModel } from "../../utils/useVModel.js";
 
 export default {
@@ -35,9 +33,6 @@ export default {
     fields: Object,
     value: null,
     disabled: Boolean
-  },
-  components: {
-    ValidationProvider
   },
   setup(props, { emit }) {
     const type = computed(() => `octo-form-${props.field.type}`);

@@ -1,5 +1,5 @@
 <template>
-  <o-h size="2" type="is-default">{{ title }}</o-h>
+  <o-h size="2" type="is-muted">{{ title }}</o-h>
 </template>
 
 <script>

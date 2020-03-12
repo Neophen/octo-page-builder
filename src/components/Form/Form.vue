@@ -41,14 +41,12 @@
 
 <script>
 import { reactive, toRefs, ref, computed, watch } from "@vue/composition-api";
-import { ValidationObserver } from "vee-validate";
 import Field from "../Field/Field.vue";
 
 export default {
   name: "OctoForm",
   components: {
-    [Field.name]: Field,
-    ValidationObserver
+    [Field.name]: Field
   },
   props: {
     fieldset: {

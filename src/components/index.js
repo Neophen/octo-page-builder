@@ -10,4 +10,6 @@ export { default as ONumber } from "./Number";
 export { default as SingleTag } from "./SingleTag";
 export { default as Countries } from "./Countries";
 export { default as Year } from "./Year";
+export { default as Tags } from "./Tags";
+export { default as Languages } from "./Languages";
 // export { OTagList, OTag } from "./Tag";

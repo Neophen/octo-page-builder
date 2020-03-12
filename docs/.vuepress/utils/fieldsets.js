@@ -344,3 +344,173 @@ export const contactFieldsetNumbered = {
     icon: "contact-slack",
   }
 };
+
+
+export const inputsFieldset = {
+  // cover_img: {
+  //   display: "Cover image",
+  //   type: "image",
+  //   validate: "required",
+  //   container: "img_film",
+  //   folder: "film_covers",
+  //   quality: 2,
+  //   width: 960,
+  //   height: 300
+  // },
+  // film_still_imgs: {
+  //   display: "Film stills",
+  //   type: "images",
+  //   max_files: 3,
+  //   container: "img_film",
+  //   folder: "film_stills",
+  //   quality: 3,
+  //   width: 640,
+  //   height: 360
+  // },
+  section_input: {
+    display: "Section",
+    type: "section"
+  },
+  text: {
+    display: "Text",
+    type: "text",
+    placeholder: 'Text input...',
+    validate: "required|max:150",
+    localizable: true
+  },
+  list: {
+    display: "List",
+    type: "list",
+    placeholder: 'List input...',
+    localizable: true
+  },
+  rich_text: {
+    display: "Rich text input",
+    type: "list",
+    placeholder: 'Rich text input...',
+    localizable: true
+  },
+  // avatar: {
+  //   display: "Avatar",
+  //   type: "avatar",
+  //   quality: 2,
+  //   width: 300,
+  //   height: 300,
+  //   folder: "film_directors",
+  //   container: "img_film",
+  // },
+  textarea: {
+    display: "Textarea",
+    type: "textarea",
+    placeholder: 'Textarea input...',
+    validate: "required|max:1000",
+    localizable: true
+  },
+  radio_group: {
+    display: "Radio group",
+    type: "radio-group",
+    default: "default",
+    options: {
+      default: "Default",
+      other: "Other"
+    }
+  },
+  number: {
+    display: "Number",
+    placeholder: 'Number input...',
+    type: "number",
+    min: 0,
+  },
+  tag: {
+    display: "Tag",
+    type: "single-tag",
+    placeholder: "Please select a tag...",
+    can_add: true,
+    add_config: {
+      title: "Add age restriction",
+      taxonomy: "age_restrictions",
+      fieldset: "taxonomies/age_restrictions_co",
+    },
+    options: [
+      {
+        label: 'Tag 1',
+        value: 'tag-1'
+      },
+      {
+        label: 'Tag 2',
+        value: 'tag-2'
+      },
+      {
+        label: 'Tag 3',
+        value: 'tag-3'
+      },
+      {
+        label: 'Tag 4',
+        value: 'tag-4'
+      },
+      {
+        label: 'Tag 5',
+        value: 'tag-5'
+      },
+      {
+        label: 'Tag 6',
+        value: 'tag-6'
+      },
+    ],
+  },
+  countries: {
+    display: "Countries",
+    type: "countries",
+    validate: "required",
+    placeholder: "Select countries...",
+  },
+  year: {
+    display: "Year",
+    type: "year",
+    placeholder: "Please select a year..",
+    min: 2000,
+  },
+  tags: {
+    display: "Tags",
+    placeholder: "Select tags..",
+    type: "tags",
+    max_items: 3,
+    can_add: true,
+    add_config: {
+      title: "Add a genre",
+      taxonomy: "genres",
+      fieldset: "taxonomies/genres_co",
+    },
+    options: [
+      {
+        label: 'Tag 1',
+        value: 'tag-1'
+      },
+      {
+        label: 'Tag 2',
+        value: 'tag-2'
+      },
+      {
+        label: 'Tag 3',
+        value: 'tag-3'
+      },
+      {
+        label: 'Tag 4',
+        value: 'tag-4'
+      },
+      {
+        label: 'Tag 5',
+        value: 'tag-5'
+      },
+      {
+        label: 'Tag 6',
+        value: 'tag-6'
+      },
+    ],
+  },
+  languages: {
+    display: "Languages",
+    type: "languages",
+    placeholder: "Select languages..",
+  },
+};

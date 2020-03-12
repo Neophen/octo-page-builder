@@ -51,7 +51,7 @@ export const languages = [
   { value: "IN", label: "Indonesian" },
   { value: "IA", label: "Interlingua" },
   { value: "IE", label: "Interlingue" },
-  { value: "IK", label: "Inupiak</opti" },
+  { value: "IK", label: "Inupiak" },
   { value: "GA", label: "Irish" },
   { value: "IT", label: "Italian" },
   { value: "JA", label: "Japanese" },
