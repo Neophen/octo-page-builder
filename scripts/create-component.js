@@ -86,7 +86,7 @@ const allFiles = [
   },
   {
     src: `./scripts/Sample/Sample.txt`,
-    dest: `${componentDir}/${name}.js`
+    dest: `${componentDir}/${name}.vue`
   },
   {
     src: `./scripts/sample-page.md`,
