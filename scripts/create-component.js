@@ -64,7 +64,6 @@ const argv = yargs.help().alias("help", "h").argv;
 const name = argv._[0];
 const kebabName = kebabCase(name);
 
-const sampleDir = `./src/components/_Sample`;
 const componentDir = `./src/components/${name}`;
 const componentsIndex = `./src/components/index.js`;
 
@@ -76,14 +75,32 @@ fs.mkdir(componentDir, { recursive: true }, err => {
   if (err) throw err;
 });
 
-// Copy sample files
-["index.js", "Sample.spec.js", "Sample.vue"].forEach(async file => {
-  const source = `${sampleDir}/${file}`;
-  let dest = `${componentDir}/${file}`;
-
-  if (file.startsWith("Sample")) {
-    dest = `${componentDir}/${file.replace("Sample", name)}`;
+const allFiles = [
+  {
+    src: `./scripts/Sample/index.txt`,
+    dest: `${componentDir}/index.js`
+  },
+  {
+    src: `./scripts/Sample/Sample-spec.txt`,
+    dest: `${componentDir}/${name}.spec.js`
+  },
+  {
+    src: `./scripts/Sample/Sample.txt`,
+    dest: `${componentDir}/${name}.js`
+  },
+  {
+    src: `./scripts/sample-page.md`,
+    dest: `./docs/components/${kebabName}.md`
+  },
+  {
+    src: "./scripts/sample-doc.vue",
+    dest: `./docs/.vuepress/components/examples/${kebabName}-doc.vue`
   }
+];
+
+allFiles.forEach(async file => {
+  const source = file.src;
+  let dest = file.dest;
 
   await fs.copyFile(source, dest, err => {
     if (err) return console.log(err);
@@ -93,48 +110,11 @@ fs.mkdir(componentDir, { recursive: true }, err => {
     {
       search: /Sample/g,
       replace: name
+    },
+    {
+      search: /sample/g,
+      replace: kebabName
     }
   ];
   await replaceInFile(dest, options);
-});
-
-// create documentation
-
-// create md
-const docSample = "./docs/components/_sample.md";
-const docDest = `./docs/components/${kebabName}.md`;
-fs.copyFile(docSample, docDest, async err => {
-  if (err) return console.log(err);
-
-  const options = [
-    {
-      search: /Sample/g,
-      replace: name
-    },
-    {
-      search: /sample/g,
-      replace: kebabName
-    }
-  ];
-  await replaceInFile(docDest, options);
-});
-
-// create component doc
-const docComponentSample = "./docs/.vuepress/components/examples/a-doc.vue";
-const docComponentDest = `./docs/.vuepress/components/examples/${kebabName}-doc.vue`;
-
-fs.copyFile(docComponentSample, docComponentDest, async err => {
-  if (err) return console.log(err);
-
-  const options = [
-    {
-      search: /Sample/g,
-      replace: name
-    },
-    {
-      search: /sample/g,
-      replace: kebabName
-    }
-  ];
-  await replaceInFile(docComponentDest, options);
 });
