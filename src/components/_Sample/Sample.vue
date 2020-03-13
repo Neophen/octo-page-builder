@@ -25,7 +25,7 @@
 import { fieldMixin } from "../../utils/fieldMixin.js";
 import { vModelMixin } from "../../utils/vModelMixin.js";
 export default {
-  name: "OctoForm",
+  name: "OctoFormSample",
   mixins: [vModelMixin, fieldMixin]
 };
 </script>
