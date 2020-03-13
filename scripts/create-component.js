@@ -93,7 +93,7 @@ const allFiles = [
     dest: `./docs/components/${kebabName}.md`
   },
   {
-    src: "./scripts/sample-doc.vue",
+    src: "./scripts/sample-doc.txt",
     dest: `./docs/.vuepress/components/examples/${kebabName}-doc.vue`
   }
 ];
