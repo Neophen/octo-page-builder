@@ -8,11 +8,10 @@
     :number="fieldNumber"
     :hasValue="!!innerValue"
   >
-    <div class="octo-form__radio-group">
+    <o-item-grid col-first>
       <o-radio
         v-for="(value, option) in options"
         :key="option"
-        class="octo-form__radio-group-item"
         :name="key"
         v-model="innerValue"
         :true-value="option"
@@ -21,7 +20,7 @@
         :selected="option === field.default"
         >{{ value }}</o-radio
       >
-    </div>
+    </o-item-grid>
   </o-field>
 </template>
 
