@@ -164,7 +164,7 @@ export default {
 
     let supports = this.supportDetection();
     if (!supports.basic) {
-      console.warn("Your browser does not support vue-croppa functionality.");
+      console.error("Your browser does not support vue-croppa functionality.");
     }
 
     if (this.passive) {
@@ -402,7 +402,7 @@ export default {
       if (this.disableRotation || this.disabled || this.passive) return;
       step = parseInt(step);
       if (isNaN(step) || step > 3 || step < -3) {
-        console.warn(
+        console.error(
           "Invalid argument for rotate() method. It should one of the integers from -3 to 3."
         );
         step = 1;
@@ -449,7 +449,7 @@ export default {
 
     promisedBlob(...args) {
       if (typeof Promise == "undefined") {
-        console.warn(
+        console.error(
           "No Promise support. Please add Promise polyfill if you want to use this method."
         );
         return;
