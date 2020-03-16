@@ -32,8 +32,7 @@
     "canvas-exif-orientation": "^0.4.0"
   },
   "devDependencies": {
-    "canvas-exif-orientation": "^0.4.0",
-    "@mykolasm/octo-ui": "^0.1.36",
+    "@mykolasm/octo-ui": "^0.1.37",
     "@popperjs/core": "^2.1.1",
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
@@ -43,6 +42,7 @@
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/test-utils": "1.0.0-beta.31",
     "babel-eslint": "^10.0.3",
+    "canvas-exif-orientation": "^0.4.0",
     "core-js": "^3.6.4",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.1",

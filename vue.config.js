@@ -14,18 +14,10 @@ module.exports = {
       "vue",
       "@vue/composition-api",
       "@popperjs/core",
+      "core-js",
       "portal-vue",
       "@mykolasm/octo-ui",
       "vee-validate"
     ]
   }
-  // css: {
-  //   loaderOptions: {
-  //     sass: {
-  //       data: `
-  //         @import "@/scss/_variables.scss";
-  //       `
-  //     }
-  //   }
-  // }
 };
