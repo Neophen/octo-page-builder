@@ -38,8 +38,9 @@ module.exports = {
               title: 'Components',
               collapsable: false,
               children: [
+                'avatar',
                 'form',
-                'film',
+                'image',
                 'inputs',
               ]
             }

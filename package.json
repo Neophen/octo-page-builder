@@ -28,10 +28,13 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "dependencies": {},
+  "dependencies": {
+    "canvas-exif-orientation": "^0.4.0"
+  },
   "devDependencies": {
-    "@mykolasm/octo-ui": "^0.1.34",
-    "@popperjs/core": "^2.1.0",
+    "canvas-exif-orientation": "^0.4.0",
+    "@mykolasm/octo-ui": "^0.1.36",
+    "@popperjs/core": "^2.1.1",
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
     "@vue/cli-plugin-unit-jest": "~4.2.0",

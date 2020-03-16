@@ -12,3 +12,6 @@ export { default as Countries } from "./Countries";
 export { default as Year } from "./Year";
 export { default as Tags } from "./Tags";
 export { default as Languages } from "./Languages";
+export { default as Avatar } from "./Avatar";
+export { default as Croppa } from "./Croppa";
+export { default as Image } from "./Image";

@@ -492,16 +492,20 @@ export const inputsFieldset = {
     display: "Images",
     type: "section"
   },
-  // cover_img: {
-  //   display: "Cover image",
-  //   type: "image",
-  //   validate: "required",
-  //   container: "img_film",
-  //   folder: "film_covers",
-  //   quality: 2,
-  //   width: 960,
-  //   height: 300
-  // },
+  avatar: {
+    display: "Avatar",
+    type: "avatar",
+    quality: 1,
+    width: 390,
+    height: 390,
+  },
+  image: {
+    display: "Image",
+    type: "image",
+    value: "/DianaAndMe.jpg",
+    width: 1920,
+    height: 1080
+  },
   // film_still_imgs: {
   //   display: "Film stills",
   //   type: "images",
@@ -513,3 +517,19 @@ export const inputsFieldset = {
   //   height: 360
   // },
 };
+
+export const inputsFieldsetErrors = {
+  text: ['text input is required'],
+  textarea: ['textarea input is required'],
+  rich_text: ['rich text input is required'],
+  radio_group: ['radio group input is required'],
+  number: ['number input is required'],
+  year: ['year input is required'],
+  tag: ['tag input is required'],
+  tags: ['tags input is required'],
+  list: ['list input is required'],
+  countries: ['countries input is required'],
+  languages: ['languages input is required'],
+  avatar: ['avatar input is required'],
+  image: ['image input is required'],
+}

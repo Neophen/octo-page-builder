@@ -1,5 +1,7 @@
 import * as components from "./components";
 
+import "./styles/app.scss";
+
 const OctoForm = {
   install(Vue) {
     // components

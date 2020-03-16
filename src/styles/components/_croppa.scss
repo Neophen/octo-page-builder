@@ -1,0 +1,50 @@
+.octo-croppa-container {
+  display: inline-block;
+  cursor: pointer;
+  // transition: all 0.3s;
+  position: relative;
+  font-size: 0;
+  align-self: flex-start;
+  background-color: #e6e6e6;
+}
+
+.octo-croppa__canvas {
+  width: 100%;
+}
+
+.octo-croppa-container:hover {
+  opacity: 0.7;
+}
+.octo-croppa-container.octo-croppa--dropzone {
+  box-shadow: inset 0 0 10px #333;
+}
+.octo-croppa-container.octo-croppa--dropzone canvas {
+  opacity: 0.5;
+}
+.octo-croppa-container.octo-croppa--disabled-cc {
+  cursor: default;
+}
+.octo-croppa-container.octo-croppa--disabled-cc:hover {
+  opacity: 1;
+}
+.octo-croppa-container.octo-croppa--has-target {
+  cursor: move;
+}
+.octo-croppa-container.octo-croppa--has-target:hover {
+  opacity: 1;
+}
+.octo-croppa-container.octo-croppa--has-target.octo-croppa--disabled-mz {
+  cursor: default;
+}
+.octo-croppa-container.octo-croppa--disabled {
+  cursor: not-allowed;
+}
+.octo-croppa-container.octo-croppa--disabled:hover {
+  opacity: 1;
+}
+.octo-croppa-container.octo-croppa--passive {
+  cursor: default;
+}
+.octo-croppa-container.octo-croppa--passive:hover {
+  opacity: 1;
+}

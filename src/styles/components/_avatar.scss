@@ -1,0 +1,51 @@
+.octo-avatar {
+  position: relative;
+
+  .octo-avatar__placeholder-image {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1.25rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .octo-avatar__placeholder-label {
+    text-decoration: underline;
+  }
+
+  .octo-croppa-container {
+    box-shadow: var(--octo-shadow-idle);
+    position: relative;
+    overflow: hidden;
+    border-radius: 999px;
+    border: 1px dashed black;
+    font-size: 0 !important;
+    cursor: pointer;
+    .octo-avatar__placeholder {
+      color: var(--octo-text-default);
+      font-size: 18px !important;
+    }
+  }
+
+  .has-file {
+    .octo-croppa-container {
+      border: 1px solid black;
+    }
+  }
+
+  .octo-croppa-container:hover {
+    box-shadow: var(--octo-shadow-focus);
+    border-color: var(--octo-primary-500);
+    .octo-avatar__placeholder {
+      color: var(--octo-primary-500);
+    }
+  }
+
+  .octo-avatar__change-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+}

@@ -1,7 +1,6 @@
 <template>
   <validation-observer
     ref="refValidation"
-    class="mx-auto"
     v-slot="{ valid, invalid, handleSubmit, dirty, reset }"
   >
     <form ref="refForm" @submit.prevent="handleSubmit(onSubmit)">
@@ -11,28 +10,27 @@
         :key="key"
         :field="field"
         :fields="newfieldset"
-        :disabled="isLoading"
+        :disabled="loading"
         v-model="field.value"
       ></octo-form-field>
-      <slot>
+      <slot v-bind:dirty="dirty" v-bind:reset="reset" v-bind:invalid="invalid">
         <div class="octo-form__buttons">
           <o-button
             class="octo-form__cancel-btn"
             dusk="octo-form__cancel-btn"
+            :disabled="loading"
             @click="$emit('cancel', dirty) && reset()"
+            >Cancel</o-button
           >
-            Cancel
-          </o-button>
           <o-button
             native-type="submit"
             type="is-primary"
             class="octo-form__confirm-btn"
             dusk="octo-form__confirm-btn"
-            :loading="isLoading"
+            :loading="loading"
             :disabled="invalid || !canSubmit"
+            >Confirm</o-button
           >
-            Confirm
-          </o-button>
         </div>
       </slot>
     </form>
@@ -57,7 +55,8 @@ export default {
       type: Object,
       required: false
     },
-    errors: Array
+    errors: [Array, Object],
+    loading: Boolean
   },
   setup(props, { emit, root }) {
     const refForm = ref(null);
@@ -65,7 +64,6 @@ export default {
 
     const state = reactive({
       newfieldset: props.fieldset,
-      isLoading: false,
       acceptTermsConditions: false
     });
 
@@ -78,7 +76,11 @@ export default {
     });
 
     const isEmpty = value => {
-      return value.constructor === Object && Object.entries(value).length === 0;
+      return (
+        value &&
+        value.constructor === Object &&
+        Object.entries(value).length === 0
+      );
     };
 
     watch(
@@ -92,28 +94,31 @@ export default {
     );
 
     async function onSubmit() {
-      emit("start-submission");
+      emit("submit-state", "start");
 
       const prepareFields = Object.values(refValidation.value.refs)
         .filter(field => field.$children[0].prepare)
         .map(field => field.$children[0].prepare());
 
-      emit("async-start");
+      emit("submit-state", "progress-25");
       const blobs = await Promise.all(prepareFields);
 
-      emit("async-prepared");
+      emit("submit-state", "progress-75");
 
       const formData = new FormData(refForm.value);
 
-      // for (var pair of formData.entries()) {
-      //   console.log(pair[0] + ": " + pair[1]);
-      // }
-
       blobs
         .filter(blob => blob)
-        .forEach(blob => formData.append(blob.key, blob.value));
+        .forEach(blob => {
+          // for images that have extras like _focus, _alt
+          if (Array.isArray(blob)) {
+            blob.forEach(b => formData.append(b.key, b.value));
+          } else {
+            formData.append(blob.key, blob.value);
+          }
+        });
 
-      emit("async-appended");
+      emit("submit-state", "finished");
       emit("submit", formData);
     }
 
