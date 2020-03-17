@@ -1,36 +1,55 @@
 <template>
   <opb-block-layout :highlight="highlight">
-    <div class="oct-container oct-text-photo">
-      <div class="oct-row --reverse">
-        <div class="oct-col right-block">
-          <div class="oct-text-photo__img">
-            <!-- <image-upload
+    <div class="oct-container oct-grid-2">
+      <div class="oct-aspect-ratio-box is-right">
+        <!-- <image-upload
               :width="768"
               :height="432"
               v-model="image"
               folder="text-photo"
-            /> -->
-          </div>
+        />-->
+        <div class="oct-text-photo__img">
+          <img src="/pirmoji_banga.jpg" />
         </div>
-        <div class="oct-col left-block">
-          <div class="oct-text-content">
-            <!-- <rich-text v-model="text"></rich-text> -->
-          </div>
+      </div>
+      <div class="oct-text-content is-left">
+        <h2 class="oct-h3">„Scanoramos kryptys“</h2>
+        <p class="oct-p">
+          Industrinių renginių serija, kviečianti kino profesionalus ir
+          pradedančius nemokamai semtis vertingų žinių.
+        </p>
+        <h3 class="oct-h3">Programoje</h3>
+        <ul class="oct-ul">
+          <li>Teminės dirbtuvės</li>
+          <li>Koprodukcijos forumai</li>
+          <li>Pranešimai ir seminarai</li>
+          <li>Diskusijos su profesionalais</li>
+        </ul>
+
+        <div class="oct-mt-4">
           <a
-            v-for="(button, i) in buttons"
-            class="oct-btn--primary --large"
-            :key="i"
-            :href="button.href"
-            :data-link-type="button.type"
+            href="https://scanorama.lt/2019?events=true"
+            class="oct-btn--primary --large "
           >
-            <input
-              type="text"
-              v-model="button.text"
-              style="background:transparent;"
-            />
+            Plačiau apie renginius
           </a>
-          <o-button type="is-dashed" @click="addButton">add button</o-button>
         </div>
+
+        <!-- <rich-text v-model="text"></rich-text> -->
+        <!-- <a
+          v-for="(button, i) in buttons"
+          class="oct-btn--primary --large"
+          :key="i"
+          :href="button.href"
+          :data-link-type="button.type"
+        >
+          <input
+            type="text"
+            v-model="button.text"
+            style="background:transparent;"
+          />
+        </a>
+        <o-button type="is-dashed" @click="addButton">add button</o-button> -->
       </div>
     </div>
     <opb-block-spacer v-model="spacer" />

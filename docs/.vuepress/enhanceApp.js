@@ -16,6 +16,7 @@ export default ({ Vue }) => {
       dashboard: '/svg/icons_dashboard.svg',
       opb: '/svg/icons_page_builder.svg',
       page_blocks: '/svg/icons_page_blocks.svg',
+      icons_site: '/svg/icons_site.svg',
     }
   });
 

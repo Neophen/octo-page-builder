@@ -45,34 +45,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-.opb-block-spacer {
-  box-sizing: border-box;
-  border: 1px dashed #e4e4e4;
-  transition: height 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  .opb-block-spacer__info {
-    display: none;
-  }
-
-  .opb-block-spacer__icon {
-    width: 1rem;
-    margin-right: 1rem;
-  }
-
-  &:hover {
-    background: rgba(24, 68, 224, 0.05);
-    // background: var(--octo-primary-200);
-    border: 1px dashed var(--octo-primary-500);
-    color: var(--octo-primary-500);
-    .opb-block-spacer__info {
-      display: flex;
-      align-items: center;
-    }
-  }
-}
-</style>

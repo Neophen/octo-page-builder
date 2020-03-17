@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="established" viewBox="0 0 33.563 40">
+    <path d="M30.625,2.188V0H4.708V40h2V34.208H26.083v3.6H38.271V2.188ZM17.305,30.337c-2.366,0-3.853-1.79-3.853-5.663V19.486h2.267v6.493c0,1.993.148,3.455,1.586,3.455,1.338,0,1.567-1.343,1.567-3.455,0-2.92-.575-4.63-2.862-9.334-1.953-4.016-2.571-5.96-2.571-8.5,0-3.495,1.387-5.525,3.834-5.525,2.365,0,3.851,1.84,3.851,5.123v4.53H18.858V7.34c0-1.993-.148-3.816-1.585-3.816-1.247,0-1.568,1.488-1.568,3.816,0,3.817,1.669,6.624,2.588,8.432,1.239,2.44,2.846,6.1,2.846,8.882C21.139,28.148,19.752,30.337,17.305,30.337Zm18.966,5.476H28.352l2.273-1.6V4.188h5.646ZM32.4,30.125V5.958h2V30.125Zm2.041,1.542V34h-2V31.667Z" transform="translate(-4.708)" fill="#1a1818"/>
+  </symbol>
+  <symbol id="cities" viewBox="0 0 40 40.077">
+    <g transform="translate(0 0.077)">
+      <g transform="translate(0 16.75)" fill="#1a1818" stroke="#1a1818" stroke-miterlimit="10" stroke-width="0.8">
+        <rect width="15.75" height="23.25" stroke="none"/>
+        <rect x="0.4" y="0.4" width="14.95" height="22.45" fill="none"/>
+      </g>
+      <g fill="#1a1818" stroke-miterlimit="10">
+        <path d="M 39.60000228881836 39.59999847412109 L 23.1916618347168 39.59999847412109 L 23.1916618347168 11.31666851043701 L 25.58854293823242 11.31666851043701 L 25.98528289794922 11.31666851043701 L 25.9885311126709 10.91994857788086 L 26.00090217590332 9.410418510437012 L 37.10835266113281 9.410418510437012 L 37.12084197998047 10.91997909545898 L 37.12413024902344 11.31666851043701 L 37.52083206176758 11.31666851043701 L 39.60000228881836 11.31666851043701 L 39.60000228881836 39.59999847412109 Z" stroke="none"/>
+        <path d="M 39.20000076293945 39.20000076293945 L 39.20000076293945 11.7166690826416 L 37.52083206176758 11.7166690826416 L 36.72742080688477 11.7166690826416 L 36.72086334228516 10.92328929901123 L 36.71165466308594 9.810419082641602 L 26.39763069152832 9.810419082641602 L 26.38851165771484 10.9232292175293 L 26.38201141357422 11.7166690826416 L 25.58854293823242 11.7166690826416 L 23.59166145324707 11.7166690826416 L 23.59166145324707 39.20000076293945 L 39.20000076293945 39.20000076293945 M 40.00000381469727 40 L 22.79166221618652 40 L 22.79166221618652 10.91666889190674 L 25.58854293823242 10.91666889190674 L 25.60416221618652 9.010418891906738 L 37.50506210327148 9.010418891906738 L 37.52083206176758 10.91666889190674 L 40.00000381469727 10.91666889190674 L 40.00000381469727 40 Z" stroke="none" fill="#1a1818"/>
+      </g>
+      <path d="M27.7,3.964"/>
+      <path d="M28.423,15.795V3.129H23.178V.923H14.012V3.031h-5.1V9.083" fill="none" stroke="#1a1818" stroke-miterlimit="10" stroke-width="2"/>
+      <path d="M15.042,9.647h5.591v1.624" fill="none" stroke="#1a1818" stroke-miterlimit="10" stroke-width="2"/>
+      <path d="M21.458,6H16.074V7.813" fill="none" stroke="#1a1818" stroke-miterlimit="10" stroke-width="2"/>
+      <path d="M8.954,8.02H10.1v4H8.938v3.889h1.208v2.125" fill="none" stroke="#1a1818" stroke-miterlimit="10" stroke-width="2"/>
+      <path d="M24.963,9.354" fill="none" stroke="#1a1818" stroke-miterlimit="10" stroke-width="2"/>
+      <line x2="5.625" transform="translate(2.333 21.313)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <line x2="5.625" transform="translate(2.375 27.146)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <line x2="5.625" transform="translate(2.396 33.458)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <path d="M15.083,17.022h5.591v1.624" fill="none" stroke="#1a1818" stroke-miterlimit="10" stroke-width="2"/>
+      <path d="M21.5,13.379H16.116v1.809" fill="none" stroke="#1a1818" stroke-miterlimit="10" stroke-width="2"/>
+      <rect width="2.313" height="2.313" transform="translate(25.552 13.875)" fill="#fff"/>
+      <rect width="2.313" height="2.313" transform="translate(25.552 19.333)" fill="#fff"/>
+      <rect width="2.313" height="2.313" transform="translate(25.552 25)" fill="#fff"/>
+      <rect width="2.313" height="2.313" transform="translate(25.552 30.958)" fill="#fff"/>
+      <rect width="2.313" height="2.313" transform="translate(35.51 13.792)" fill="#fff"/>
+      <rect width="2.313" height="2.313" transform="translate(35.51 19.25)" fill="#fff"/>
+      <rect width="2.313" height="2.313" transform="translate(35.51 24.917)" fill="#fff"/>
+      <rect width="2.313" height="2.313" transform="translate(35.51 30.875)" fill="#fff"/>
+      <line x2="3.583" transform="translate(29.917 14.875)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <line x2="3.583" transform="translate(29.958 17.625)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <line x2="3.583" transform="translate(29.958 20.542)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <line x2="3.583" transform="translate(30 23.292)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <line x2="3.583" transform="translate(30.125 26.292)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <line x2="3.583" transform="translate(30.167 29.042)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <line x2="3.583" transform="translate(30.167 31.958)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <line x2="3.583" transform="translate(30.208 34.708)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <circle cx="5.833" cy="5.833" r="5.833" transform="translate(13.542 24.125)" fill="#1a1818"/>
+      <line y2="5.458" transform="translate(19.333 34.542)" fill="none" stroke="#1a1818" stroke-miterlimit="10" stroke-width="2"/>
+      <path d="M15.125,24.48h5.591V26.1" fill="none" stroke="#1a1818" stroke-miterlimit="10" stroke-width="2"/>
+      <path d="M21.542,20.837H16.157v1.809" fill="none" stroke="#1a1818" stroke-miterlimit="10" stroke-width="2"/>
+      <rect width="2.313" height="2.313" transform="translate(10.385 19.958)" fill="#fff"/>
+      <rect width="2.313" height="2.313" transform="translate(10.385 32.042)" fill="#fff"/>
+    </g>
+  </symbol>
+  <symbol id="culture" viewBox="0 0 40.234 39.955">
+    <g transform="translate(0.228 -0.045)">
+      <path d="M34.8,5.248" stroke="#1a1818" stroke-miterlimit="10" stroke-width="0.8"/>
+      <path d="M30.375,1.6" stroke="#1a1818" stroke-miterlimit="10" stroke-width="0.8"/>
+      <g transform="translate(0.7 14.993)" fill="#1a1818" stroke="#1a1818" stroke-miterlimit="10" stroke-width="0.8">
+        <rect width="39.3" height="25.007" stroke="none"/>
+        <rect x="0.4" y="0.4" width="38.5" height="24.207" fill="none"/>
+      </g>
+      <g transform="translate(-0.228 5.228) rotate(-7.5)" fill="#1a1818" stroke="#1a1818" stroke-miterlimit="10" stroke-width="0.8">
+        <rect width="39.709" height="6.577" stroke="none"/>
+        <rect x="0.4" y="0.4" width="38.909" height="5.777" fill="none"/>
+      </g>
+      <image width="33.6" height="11.28" transform="translate(3.817 0.76)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAAAvCAYAAAAxSCJ+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGrSURBVHhe7diBbsMgDEXRZv//z1nQ2MReW4IJTtxwj4QaVa1U8MOgLuu6PoBWX/kVaEJgYEJgYEJgYEJgYEJgYEJgYEJgYMIfdxNYluVfkbeaL/nRjMDcw24Rt9DkJwIzi0OFKgOT9IaGwATx4tjIT+OMCA2X3iC0eFrcKAhMIN6h0a6lXa0FgTFIC1yO/PZHOXrUcYd5Vl2QLSj56Yd2hRE0jKNrdGQOM3aYtPq1cXsaQEu3vGWHibxDW3nPYdP1m7nDBKUh1JA2SF+ojS63DMyAxa7S3a7d4ERlAHS4uOxIKhdZCzzCCS39KYge84jGs8OkCtXGH48dqsXT4qLPkcBoAHRczjs02rU8gh9N9UgqF6D2uV5aQC3wCFpEh3lM1bqaO8zo3XkWDWHnPNKX3o2p7F56vXfoGV0mKefxYg7TFb7X5YFJzgoNjts9krR4WlzMpekO4x0a7Vra1RCH5/8wZimYvyO/hWB27zClAfcZgvDhRneYFIjawIczdRgg1B0G8REYmBAYmBAYmBAYmBAYmBAYmBAYmBAYmBAYmBAYmBAYmBAYGDwe3+Fq1Dm79j/lAAAAAElFTkSuQmCC"/>
+      <g transform="translate(40.006 18.324) rotate(179.852)" fill="#1a1818" stroke="#1a1818" stroke-miterlimit="10" stroke-width="0.8">
+        <rect width="39.3" height="6.719" stroke="none"/>
+        <rect x="0.4" y="0.4" width="38.5" height="5.919" fill="none"/>
+      </g>
+      <image width="32.64" height="9.36" transform="translate(3.337 9.4)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIgAAAAnCAYAAADU8ABpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEeSURBVHhe7dvhasJAEEXhrO//zjEhQXRNbnaTmTgj5wNp8Ydcy9ltC20Zx3EA9jzWj8AmAoFEIJAIBBKBQCIQSAQCiUAgEQgkAoFEIJAIBBKBQCIQSAQCiUAgEQgkj78oa37BUsr62WLa8vnERdPrv7ZYvs87d8+8trfsPrxB5rHvj+mpo8cp3l9kL9a7a15xtOr6FvPrsWdl2h0tbBlI1lN4125vEcJuvkGy3h6W6t1Zw+7ZvRtIxLFnWIad1ZUD2fUziAXv2yNr2PXuKGE3BZL1FFru9g7bS727N+zNQP7lFHqx3l2LdCAPb5CspzDT7shhfwXC7aFZ765FC5t/3oZ0+28xyIVAIBEIJAKBRCCQCAQSgUAiEEgEAmEYnqLohUGiXFfJAAAAAElFTkSuQmCC"/>
+      <line x2="8.125" transform="translate(4.667 31.688)" fill="#fff" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+      <line x2="18.438" transform="translate(4.729 35.813)" fill="#fff" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+  </symbol>
+  <symbol id="film-titles" viewBox="0 0 40.005 40">
+    <g transform="translate(0.004)">
+      <line y2="40" transform="translate(1.004)" stroke="#1a1818" stroke-miterlimit="10" stroke-width="2"/>
+      <line y2="40" transform="translate(38.999)" stroke="#1a1818" stroke-miterlimit="10" stroke-width="2"/>
+      <path d="M.4,13.774" stroke="#1a1818" stroke-miterlimit="10" stroke-width="0.8"/>
+      <g transform="translate(6.958 9.125)" fill="#1a1818" stroke="#1a1818" stroke-miterlimit="10" stroke-width="0.8">
+        <rect width="26.437" height="21.083" stroke="none"/>
+        <rect x="0.4" y="0.4" width="25.637" height="20.283" fill="none"/>
+      </g>
+      <path d="M0,1l7.881.031V5.526h24.65l0-4.514L40,1" fill="none" stroke="#1a1818" stroke-miterlimit="10" stroke-width="2"/>
+      <path d="M38.255,13.774" stroke="#1a1818" stroke-miterlimit="10" stroke-width="0.8"/>
+      <path d="M26.352,38.188" fill="none" stroke="#1a1818" stroke-miterlimit="10" stroke-width="0.8"/>
+      <path d="M14.683,39.667" fill="none" stroke="#1a1818" stroke-miterlimit="10" stroke-width="0.8"/>
+      <rect width="2.036" height="1.833" transform="translate(3.398 4.135)"/>
+      <rect width="2.036" height="1.833" transform="translate(3.454 9.198)"/>
+      <rect width="2.036" height="1.833" transform="translate(3.454 14.073)"/>
+      <path d="M0,38.963l7.881-.031V34.438h24.65l0,4.514L40,38.959" fill="none" stroke="#1a1818" stroke-miterlimit="10" stroke-width="2"/>
+      <rect width="2.036" height="1.833" transform="translate(3.419 18.76)"/>
+      <rect width="2.036" height="1.833" transform="translate(3.475 23.823)"/>
+      <rect width="2.036" height="1.833" transform="translate(3.475 28.698)"/>
+      <rect width="2.036" height="1.833" transform="translate(3.537 33.573)"/>
+      <rect width="2.036" height="1.833" transform="translate(34.961 4.135)"/>
+      <rect width="2.036" height="1.833" transform="translate(35.017 9.198)"/>
+      <rect width="2.036" height="1.833" transform="translate(35.017 14.073)"/>
+      <rect width="2.036" height="1.833" transform="translate(34.982 18.76)"/>
+      <rect width="2.036" height="1.833" transform="translate(35.037 23.823)"/>
+      <rect width="2.036" height="1.833" transform="translate(35.037 28.698)"/>
+      <rect width="2.036" height="1.833" transform="translate(35.1 33.573)"/>
+    </g>
+  </symbol>
+  <symbol id="iconid" viewBox="0 0 24 24">
+    <path />
+  </symbol>
+</svg>

@@ -1,13 +1,15 @@
 <template>
-  <div class="opb-builder">
+  <div class="opb-page-builder">
     <opb-top-bar
       :page="page"
       @change-locale="changeLocale"
       @publish="publish"
+      @change-width="changeWidth"
     />
     <div class="opb-content">
       <draggable
-        class="list-group"
+        class="obp-content__container"
+        :style="contentStyle"
         v-model="content"
         v-bind="dragOptions"
         @start="drag = true"
@@ -27,53 +29,6 @@
           </div>
         </transition-group>
       </draggable>
-      <!-- <Container
-        group-name="page-builder-group"
-        :get-child-payload="getContentPayload"
-        drag-handle-selector=".content-drag-handle"
-        @drop="onDrop($event)"
-        @drag-start="dragStart"
-        @drag-end="onDragEnd"
-        class="content-container"
-        drop-class="block-panel__drag-ghost-drop"
-        :should-animate-drop="shouldAnimateDrop"
-        :drop-placeholder="dropPlaceholderOptions"
-      >
-        <Draggable v-if="content.length === 0">
-          <div class="empty-content">
-            <o-h>Drag your first block here</o-h>
-          </div>
-        </Draggable>
-        <Draggable
-          class="draggable-item"
-          v-for="(block, index) in content"
-          :key="block.id"
-        >
-          <component
-            :class="{ 'pointer-events-none': disablePointerEvents }"
-            :is="block.type"
-            v-model="block.getData"
-            :block="block"
-            :locale="currentLocale"
-            :highlight="block.highlight"
-            :key="block.id"
-          />
-          <div
-            class="absolute right-0 top-0 mt-4 mr-12 block-settings-container"
-          >
-            <block-settings
-              :index="index"
-              :max-index="content.length"
-              @move-up="moveUp"
-              @move-down="moveDown"
-              :content="content"
-              :block="block"
-              @open-settings="openSettings"
-              @delete="deleteBlock"
-            />
-          </div>
-        </Draggable>
-      </Container>-->
     </div>
     <opb-sidebar
       group-name="page-builder-group"
@@ -87,28 +42,6 @@
 import { toRefs, reactive, computed } from "@vue/composition-api";
 
 import draggable from "vuedraggable";
-
-export const applyDrag = (arr, dragResult, locale) => {
-  const { removedIndex, addedIndex, payload } = dragResult;
-  if (removedIndex === null && addedIndex === null) return arr;
-
-  const result = [...arr];
-  let itemToAdd = { ...payload };
-
-  if (removedIndex === null) {
-    itemToAdd.id = `id-${locale}-${arr.length + 1}`;
-  }
-
-  if (removedIndex !== null) {
-    itemToAdd = result.splice(removedIndex, 1)[0];
-  }
-
-  if (addedIndex !== null) {
-    result.splice(addedIndex, 0, itemToAdd);
-  }
-
-  return result;
-};
 
 export default {
   name: "OctoPageBuilder",
@@ -124,13 +57,15 @@ export default {
   setup(props, { emit }) {
     const state = reactive({
       drag: false,
-      // old
       disablePointerEvents: false,
-      dropPlaceholderOptions: {
-        className: "drop-preview",
-        animationDuration: "150",
-        showOnTop: false
+      loaded: false,
+      contentWidth: "100%",
+      iframe: {
+        src: window.location.href,
+        style: null,
+        wrapperStyle: null
       },
+      // Page content
       defaultLocale: "en",
       currentLocale: "en",
       allPageContent: props.page.content
@@ -144,10 +79,6 @@ export default {
         state.allPageContent[state.currentLocale] = content;
       }
     });
-
-    const shouldAnimateDrop = options => {
-      return options.behaviour !== "copy";
-    };
 
     const moveUp = index => {
       // console.log("move up: ", index);
@@ -172,9 +103,7 @@ export default {
     };
 
     // const openSettings = index => {
-    const openSettings = () => {
-      // console.log("open settings: ", index);
-    };
+    const openSettings = () => {};
 
     const deleteBlock = index => {
       // console.log("delete: ", index);
@@ -207,6 +136,14 @@ export default {
       return `opb-block-${block.type}`;
     });
 
+    // const iframeSrc = computed(() => {
+    //   if (state.refEditor && state.refIframe) {
+    //     console.log(state.refEditor);
+    //     return state.refEditor;
+    //   }
+    //   return "about:blank";
+    // });
+
     const dragOptions = computed(() => {
       return {
         animation: 200,
@@ -216,10 +153,17 @@ export default {
       };
     });
 
+    // iframe shit
+
+    const contentStyle = computed(() => `width: ${state.contentWidth};`);
+
+    const changeWidth = width => {
+      state.contentWidth = width;
+    };
+
     return {
       ...toRefs(state),
       content,
-      shouldAnimateDrop,
       moveUp,
       moveDown,
       openSettings,
@@ -228,16 +172,19 @@ export default {
       publish,
       // new
       getBlockType,
-      dragOptions
+      dragOptions,
+      contentStyle,
+      changeWidth
     };
   },
   methods: {
     dragStart() {
       this.disablePointerEvents = true;
     },
-    onDrop(dropResult) {
+    // onDrop(dropResult) {
+    onDrop() {
       this.disablePointerEvents = false;
-      this.content = applyDrag(this.content, dropResult, this.currentLocale);
+      // this.content = applyDrag(this.content, dropResult, this.currentLocale);
     },
     onDragEnd() {
       this.disablePointerEvents = false;
@@ -253,7 +200,7 @@ export default {
 .draggable-item {
   box-sizing: border-box;
   border: 1px solid transparent;
-  @apply relative;
+  position: relative;
   .block-settings-container {
     display: none;
   }
@@ -276,7 +223,9 @@ export default {
   left: 0;
   top: 0;
   width: 100%;
-  @apply flex items-center justify-center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content-container {
