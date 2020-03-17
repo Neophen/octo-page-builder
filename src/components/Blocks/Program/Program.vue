@@ -1,22 +1,16 @@
 <template>
-  <highlight-block :highlight="highlight">
+  <opb-block-layout :highlight="highlight">
     <div>This block needs to be finished</div>
-    <spacer-block v-model="spacer" />
-  </highlight-block>
+    <opb-block-spacer v-model="spacer" />
+  </opb-block-layout>
 </template>
 
 <script>
 import { reactive, toRefs, onMounted } from "@vue/composition-api";
 
-import HighlightBlock from "../../shared/HighlightBlock.vue";
-import SpacerBlock from "../../shared/SpacerBlock.vue";
-
 export default {
   name: "OpbBlockProgram",
-  components: {
-    HighlightBlock,
-    SpacerBlock
-  },
+
   props: {
     highlight: {
       type: Boolean,

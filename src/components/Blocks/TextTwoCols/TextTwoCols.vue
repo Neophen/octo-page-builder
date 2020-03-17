@@ -1,10 +1,10 @@
 <template>
-  <highlight-block :highlight="highlight">
+  <opb-block-layout :highlight="highlight">
     <div class="oct-container">
       <div class="oct-row">
         <div class="oct-col left-block">
           <div class="oct-text-content">
-            <rich-text v-model="text_col_1"></rich-text>
+            <!-- <rich-text v-model="text_col_1"></rich-text> -->
           </div>
           <a
             v-for="(button, i) in buttons_col_1"
@@ -23,7 +23,7 @@
         </div>
         <div class="oct-col right-block">
           <div class="oct-text-content">
-            <rich-text v-model="text_col_2"></rich-text>
+            <!-- <rich-text v-model="text_col_2"></rich-text> -->
           </div>
           <a
             v-for="(button, i) in buttons_col_2"
@@ -42,22 +42,13 @@
         </div>
       </div>
     </div>
-    <spacer-block />
-  </highlight-block>
+    <opb-block-spacer />
+  </opb-block-layout>
 </template>
 
 <script>
-import HighlightBlock from "../../shared/HighlightBlock.vue";
-import SpacerBlock from "../../shared/SpacerBlock.vue";
-import RichText from "../../shared/tip-tap/RichText.vue";
-
 export default {
   name: "OpbBlockTextTwoCols",
-  components: {
-    RichText,
-    HighlightBlock,
-    SpacerBlock
-  },
   props: {
     highlight: null,
     content: null,

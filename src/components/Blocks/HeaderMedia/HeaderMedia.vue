@@ -1,15 +1,15 @@
 <template>
-  <highlight-block :highlight="highlight">
+  <opb-block-layout :highlight="highlight">
     <header class="oct-header --media">
-      <image-upload
+      <!-- <image-upload
         :width="1920"
         :height="600"
         v-model="image"
         folder="media-header"
-      />
+      /> -->
       <div class="oct-header__content-bg">
         <div class="oct-header__content oct-container">
-          <oct-site-info />
+          <!-- <oct-site-info /> -->
           <div class="oct-header__btn-container">
             <button type="button" class="__btn-play" id="playpause">
               <icon icon="oct_media_play" />
@@ -55,27 +55,15 @@
       </div>
     </nav>
     <div class="page-nav-spacer"></div>
-    <spacer-block v-model="spacer" />
-  </highlight-block>
+    <opb-block-spacer v-model="spacer" />
+  </opb-block-layout>
 </template>
 
 <script>
 import { reactive, toRefs, onMounted } from "@vue/composition-api";
 
-import HighlightBlock from "../../shared/HighlightBlock.vue";
-import SpacerBlock from "../../shared/SpacerBlock.vue";
-
-import OctSiteInfo from "../../shared/oct-header/OctSiteInfo.vue";
-import ImageUpload from "../../shared/image-upload/ImageUpload.vue";
-
 export default {
   name: "OpbBlockHeaderMedia",
-  components: {
-    HighlightBlock,
-    SpacerBlock,
-    OctSiteInfo,
-    ImageUpload
-  },
   props: {
     highlight: {
       type: Boolean,

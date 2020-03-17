@@ -1,20 +1,20 @@
 <template>
-  <highlight-block :highlight="highlight">
+  <opb-block-layout :highlight="highlight">
     <div class="oct-container oct-text-photo">
       <div class="oct-row --reverse">
         <div class="oct-col right-block">
           <div class="oct-text-photo__img">
-            <image-upload
+            <!-- <image-upload
               :width="768"
               :height="432"
               v-model="image"
               folder="text-photo"
-            />
+            /> -->
           </div>
         </div>
         <div class="oct-col left-block">
           <div class="oct-text-content">
-            <rich-text v-model="text"></rich-text>
+            <!-- <rich-text v-model="text"></rich-text> -->
           </div>
           <a
             v-for="(button, i) in buttons"
@@ -33,24 +33,13 @@
         </div>
       </div>
     </div>
-    <spacer-block v-model="spacer" />
-  </highlight-block>
+    <opb-block-spacer v-model="spacer" />
+  </opb-block-layout>
 </template>
 
 <script>
-import HighlightBlock from "../../shared/HighlightBlock.vue";
-import SpacerBlock from "../../shared/SpacerBlock.vue";
-import RichText from "../../shared/tip-tap/RichText.vue";
-import ImageUpload from "../../shared/image-upload/ImageUpload.vue";
-
 export default {
   name: "OpbBlockTextImage",
-  components: {
-    RichText,
-    HighlightBlock,
-    SpacerBlock,
-    ImageUpload
-  },
   props: {
     highlight: null,
     block: null,

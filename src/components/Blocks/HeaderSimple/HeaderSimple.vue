@@ -1,27 +1,19 @@
 <template>
-  <highlight-block :highlight="highlight">
+  <opb-block-layout :highlight="highlight">
     <header class="oct-header --simple">
-      <oct-site-info class="oct-container" />
+      <!-- <oct-site-info class="oct-container" /> -->
     </header>
-    <spacer-block v-model="spacer" />
-  </highlight-block>
+    <opb-block-spacer v-model="spacer" />
+  </opb-block-layout>
 </template>
 
 <script>
 import { reactive, toRefs, onMounted } from "@vue/composition-api";
 
-import HighlightBlock from "../../shared/HighlightBlock.vue";
-import SpacerBlock from "../../shared/SpacerBlock.vue";
-
-import OctSiteInfo from "../../shared/oct-header/OctSiteInfo.vue";
+// import OctSiteInfo from "../../shared/oct-header/OctSiteInfo.vue";
 
 export default {
   name: "OpbBlockHeaderSimple",
-  components: {
-    HighlightBlock,
-    SpacerBlock,
-    OctSiteInfo
-  },
   props: {
     highlight: {
       type: Boolean,
