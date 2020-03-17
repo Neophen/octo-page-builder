@@ -2,14 +2,14 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'Octo Form',
-      description: 'Documentation site for the Octo Form library plugin'
+      title: 'Octo Page Builder',
+      description: 'Documentation site for the Octo Page builder library plugin'
     }
   },
 
   themeConfig: {
     repoLabel: 'Contribute!',
-    repo: 'https://github.com/Neophen/octo-form',
+    repo: 'https://github.com/Neophen/octo-page-builder',
     docsDir: 'docs',
     editLinks: true,
     docsBranch: 'dev',
@@ -30,7 +30,7 @@ module.exports = {
         nav: [
           { text: 'Getting Started', link: '/guide' },
           { text: 'Components', link: '/components/' },
-          { text: 'GitHub', link: 'https://github.com/Neophen/octo-form' }
+          { text: 'GitHub', link: 'https://github.com/Neophen/octo-page-builder' }
         ],
         sidebar: {
           '/components/': [
@@ -38,10 +38,6 @@ module.exports = {
               title: 'Components',
               collapsable: false,
               children: [
-                'avatar',
-                'form',
-                'image',
-                'inputs',
               ]
             }
           ]

@@ -6,9 +6,9 @@ actionLink: /guide
 features:
   - title: Vue composition api
     details: Using the latest and greatest of what vue has to offer.
-  - title: Dependency free
-    details: No dependencies
+  - title: Some dependencies
+    details: As little dependencies as possible
   - title: Super customizable
     details: Customize to your hearts content
-footer: Octo Form 2020
+footer: Octo page builder 2020
 ---

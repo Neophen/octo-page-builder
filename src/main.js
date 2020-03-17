@@ -2,7 +2,7 @@ import * as components from "./components";
 
 import "./styles/app.scss";
 
-const OctoForm = {
+const OctoPageBuilder = {
   install(Vue) {
     // components
     for (const componentName in components) {
@@ -13,8 +13,8 @@ const OctoForm = {
   }
 };
 
-export default OctoForm;
+export default OctoPageBuilder;
 
 if (typeof window !== "undefined" && window.Vue) {
-  window.Vue.use(OctoForm);
+  window.Vue.use(OctoPageBuilder);
 }

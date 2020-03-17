@@ -1,27 +1,27 @@
 {
-  "name": "@mykolasm/octo-form",
-  "version": "0.1.7",
+  "name": "@mykolasm/octo-page-builder",
+  "version": "0.1.0",
   "private": false,
-  "main": "dist/octo-form.umd.min.js",
-  "unpkg": "dist/octo-form.umd.min.js",
-  "jsdelivr": "dist/octo-form.umd.min.js",
+  "main": "dist/octo-page-builder.umd.min.js",
+  "unpkg": "dist/octo-page-builder.umd.min.js",
+  "jsdelivr": "dist/octo-page-builder.umd.min.js",
   "author": "Mykolas Mankevicius",
   "license": "MIT",
   "description": "",
   "files": [
     "dist/*"
   ],
-  "homepage": "https://octo-form.netlify.com/",
+  "homepage": "https://octo-page-builder.netlify.com/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Neophen/octo-form.git"
+    "url": "https://github.com/Neophen/octo-page-builder.git"
   },
   "bugs": {
-    "url": "https://github.com/Neophen/octo-form/issues"
+    "url": "https://github.com/Neophen/octo-page-builder/issues"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name octo-form src/main.js",
+    "build": "vue-cli-service build --target lib --name octo-page-builder src/main.js",
     "prepublishOnly": "$npm_execpath run build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
