@@ -1,0 +1,39 @@
+.pagination {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: center;
+  li:first-of-type,
+  li + li {
+    margin-right: 0.625rem;
+  }
+
+  .pagination__link {
+    display: block;
+    border: 2px solid black;
+    text-align: center;
+    padding: 0.5rem 0;
+    width: 2.375rem;
+    @include transition-all;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: var(--secondary);
+      border-color: var(--secondary);
+      background: var(--secondary-faded);
+    }
+
+    &.disabled {
+      color: #dbdbdb;
+      border-color: #dbdbdb;
+      pointer-events: none;
+    }
+
+    &.active {
+      pointer-events: none;
+      color: white;
+      background: black;
+    }
+  }
+}

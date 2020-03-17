@@ -1,0 +1,164 @@
+.btn-add-heart {
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (pointer: coarse) {
+    opacity: 1;
+  }
+
+  > * {
+    pointer-events: none;
+  }
+
+  svg {
+    margin-top: 3px;
+    width: 20px;
+    height: 20px;
+  }
+  .btn-account-fill {
+    fill: white;
+  }
+
+  &:hover {
+    .btn-account-fill {
+      fill: var(--secondary);
+    }
+  }
+
+  &:focus {
+    opacity: 1;
+  }
+
+  &.active {
+    opacity: 1;
+    .btn-account-fill {
+      fill: var(--secondary);
+    }
+
+    @media (pointer: fine) {
+      &:hover {
+        .btn-account-fill {
+          fill: red;
+        }
+      }
+    }
+  }
+}
+
+.btn--facebook-login {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-align: center;
+  min-height: 2.5rem;
+  padding: 0.5rem 2rem;
+  width: 100%;
+  @media screen and (min-width: 700px) {
+    max-width: 16rem;
+  }
+
+  border: 2px solid var(--primary);
+  @include transition-all;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background: var(--primary--faded);
+  }
+
+  &::after {
+    @include btn-triangle;
+  }
+
+  &:active {
+    color: black;
+    background: var(--primary);
+    &::after {
+      border-color: transparent transparent black transparent;
+    }
+  }
+}
+
+.facebook-cancel {
+  text-decoration: underline;
+}
+
+.coop-notification {
+  opacity: 0;
+  cursor: default;
+  display: none;
+
+  &.active {
+    display: block;
+    animation: fadeOut 3s linear forwards;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  99% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.btn-add-to-program {
+  > * {
+    pointer-events: none;
+  }
+  display: flex;
+  align-items: center;
+  color: var(--secondary);
+  fill: var(--secondary);
+  @include transition-all;
+  padding: 0.5rem;
+
+  &:hover {
+    outline: none;
+    background: var(--secondary--faded);
+  }
+
+  .remove-button {
+    display: none;
+  }
+  &.active {
+    color: red;
+    fill: red;
+    &:hover {
+      outline: none;
+      background: rgba(255, 0, 0, 0.3);
+    }
+    .add-button {
+      display: none;
+    }
+    .remove-button {
+      display: block;
+    }
+  }
+}
+
+.btn__icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}

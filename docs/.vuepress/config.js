@@ -29,26 +29,22 @@ module.exports = {
         },
         nav: [
           { text: 'Getting Started', link: '/guide' },
-          { text: 'Components', link: '/components/' },
+          { text: 'Page Builder', link: '/components/page-builder' },
           { text: 'GitHub', link: 'https://github.com/Neophen/octo-page-builder' }
         ],
-        sidebar: {
-          '/components/': [
-            {
-              title: 'Components',
-              collapsable: false,
-              children: [
-                'block-spacer',
-                'block-layout',
-                'block-settings',
-                'sidebar-item',
-                'top-bar',
-                'sidebar',
-                'page-builder',
-              ]
-            }
-          ]
-        }
+        // sidebar: {
+        //   '/components/': [
+        //     {
+        //       title: 'Components',
+        //       collapsable: false,
+        //       children: [
+        //         'top-bar',
+        //         'sidebar',
+        //         'page-builder',
+        //       ]
+        //     }
+        //   ]
+        // }
       }
     }
   }

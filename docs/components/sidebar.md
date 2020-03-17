@@ -3,8 +3,6 @@
 <Demo componentName="examples-sidebar-doc" />
 
 ## Code
-```html
-```
 
 ## props
 

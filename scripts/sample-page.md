@@ -2,17 +2,17 @@
 
 <Demo componentName="examples-sample-doc" />
 
-## Code
+#### Code
 ```html
 ```
 
-## props
+#### props
 
 |Name|Description|Type|Values|Default|
 |---|---|---|---|---|
 |**prop_name**|description|type|values|default|
 
-## slots
+#### slots
 
 |Name|Description|
 |---|---|

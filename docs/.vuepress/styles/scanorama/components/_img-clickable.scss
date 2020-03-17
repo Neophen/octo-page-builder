@@ -1,0 +1,85 @@
+.img-clickable {
+  position: relative;
+  border: 2px solid black;
+  @include transition-all;
+  overflow: hidden;
+  cursor: pointer;
+
+  .img-clickable__img {
+    width: 100%;
+    height: 100%;
+    background-color: black; /* fallback color */
+    background-position: center;
+    background-size: cover;
+    @include transition-all;
+  }
+
+  .img-clickable__hover {
+    opacity: 0;
+    @include transition-all;
+  }
+
+  .triangle {
+    border-color: transparent transparent white transparent;
+  }
+
+  &:active,
+  &.active,
+  &:hover,
+  &:focus {
+    border-color: var(--secondary);
+    .img-clickable__hover {
+      opacity: 1;
+      background-color: var(--secondary--faded);
+    }
+    .img-clickable__img {
+      transform: scale(1.2);
+    }
+
+    .triangle {
+      border-color: transparent transparent var(--secondary) transparent;
+    }
+  }
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  z-index: 1; /* Sit on top */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+  width: 80%;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.rotate-45 {
+  transform: rotate(45deg);
+}
+.rotate-90 {
+  transform: rotate(90deg);
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
+.rotate-270 {
+  transform: rotate(270deg);
+}

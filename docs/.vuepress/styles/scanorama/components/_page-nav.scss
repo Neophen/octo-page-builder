@@ -1,0 +1,33 @@
+.h-nav {
+  height: 3.125em;
+}
+
+.nav__link {
+  color: #787878;
+  @include transition-all;
+  text-decoration: underline;
+
+  &.active {
+    color: var(--secondary);
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: white;
+    background: var(--secondary--faded);
+  }
+
+  @media (pointer: coarse) {
+    &:hover,
+    &:focus {
+      outline: none;
+      color: #787878;
+      background: none;
+      &.active {
+        color: var(--secondary);
+      }
+    }
+  }
+}

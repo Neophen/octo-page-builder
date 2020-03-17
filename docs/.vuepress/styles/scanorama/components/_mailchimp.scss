@@ -1,0 +1,93 @@
+#mc_embed_signup {
+  max-width: 28rem;
+  margin: 0 auto;
+
+  .mc-field-group {
+    label {
+      display: block;
+      font-weight: bold;
+      font-size: 0.875rem;
+    }
+
+    #mce-EMAIL {
+      border: 2px solid black;
+      width: 100%;
+      padding: 0.25rem 0.5rem;
+    }
+  }
+
+  .clear {
+    position: relative;
+    display: flex;
+  }
+}
+
+#mc-embedded-subscribe {
+  margin-top: 1rem;
+  margin-left: auto;
+  cursor: pointer;
+  padding: 0.25rem 2rem;
+  min-height: 2.5rem;
+  display: block;
+  position: relative;
+  color: black;
+  text-align: center;
+  background: white;
+
+  width: 100%;
+  @media screen and (min-width: 700px) {
+    width: auto;
+  }
+
+  border: 2px solid var(--primary);
+  @include transition-all;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background: var(--primary--faded);
+  }
+
+  &::after {
+    @include btn-triangle;
+  }
+
+  &:active {
+    color: black;
+    background: var(--primary);
+    &::after {
+      border-color: transparent transparent black transparent;
+    }
+  }
+}
+
+#mce-responses {
+  #mce-error-response,
+  #mce-success-response {
+    background: white;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 2px solid black;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  #mce-error-response {
+    border-color: #f56565;
+  }
+
+  #mce-success-response {
+    border-color: #48bb78;
+  }
+}
+
+#mc_embed_signup div.mce_inline_error {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  color: #f56565 !important;
+  font-size: 0.75rem;
+  font-weight: normal !important;
+}

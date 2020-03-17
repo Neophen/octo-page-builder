@@ -1,0 +1,20 @@
+.site-nav__link {
+  padding: 0.75rem 1rem;
+  display: block;
+  color: white;
+  font-size: 0.875rem;
+  line-height: 1;
+  border: 2px solid #27b67c;
+  border-color: var(--secondary);
+  @include transition-all;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background: var(--secondary--faded);
+  }
+  &:active,
+  &.active {
+    background: var(--secondary);
+  }
+}

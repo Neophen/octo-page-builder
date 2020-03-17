@@ -1,12 +1,33 @@
 <template>
-  <div class="w-screen h-screen fixed inset-0 flex flex-col overflow-hidden">
-    <!-- <top-panel
+  <div class="opb-builder">
+    <opb-top-bar
       :page="page"
       @change-locale="changeLocale"
       @publish="publish"
-    ></top-panel> -->
-    <div class="flex-1 overflow-y-scroll relative">
-      <Container
+    />
+    <div class="opb-content">
+      <draggable
+        class="list-group"
+        v-model="content"
+        v-bind="dragOptions"
+        @start="drag = true"
+        @end="drag = false"
+      >
+        <transition-group type="transition" :name="!drag ? 'flip-list' : null">
+          <div class="draggable-item" v-for="block in content" :key="block.id">
+            <component
+              :class="{ 'pointer-events-none': disablePointerEvents }"
+              :is="getBlockType(block)"
+              v-model="block.getData"
+              :block="block"
+              :locale="currentLocale"
+              :highlight="block.highlight"
+              :key="block.id"
+            />
+          </div>
+        </transition-group>
+      </draggable>
+      <!-- <Container
         group-name="page-builder-group"
         :get-child-payload="getContentPayload"
         drag-handle-selector=".content-drag-handle"
@@ -52,9 +73,9 @@
             />
           </div>
         </Draggable>
-      </Container>
+      </Container>-->
     </div>
-    <block-panel
+    <opb-sidebar
       group-name="page-builder-group"
       @drag-start="dragStart"
       @drag-end="onDragEnd"
@@ -64,7 +85,8 @@
 
 <script>
 import { toRefs, reactive, computed } from "@vue/composition-api";
-import { Container, Draggable } from "vue-smooth-dnd";
+
+import draggable from "vuedraggable";
 
 export const applyDrag = (arr, dragResult, locale) => {
   const { removedIndex, addedIndex, payload } = dragResult;
@@ -97,13 +119,12 @@ export default {
     }
   },
   components: {
-    Container,
-    Draggable
+    draggable
   },
   setup(props, { emit }) {
     const state = reactive({
-      blockPanelBtn: "Open",
-      isPanelOpen: false,
+      drag: false,
+      // old
       disablePointerEvents: false,
       dropPlaceholderOptions: {
         className: "drop-preview",
@@ -123,11 +144,6 @@ export default {
         state.allPageContent[state.currentLocale] = content;
       }
     });
-
-    const toggleBlockPanel = () => {
-      state.isPanelOpen = !state.isPanelOpen;
-      state.blockPanelBtn = state.isPanelOpen ? "Close" : "Open";
-    };
 
     const shouldAnimateDrop = options => {
       return options.behaviour !== "copy";
@@ -187,17 +203,32 @@ export default {
       emit("submit", content);
     };
 
+    const getBlockType = computed(() => block => {
+      return `opb-block-${block.type}`;
+    });
+
+    const dragOptions = computed(() => {
+      return {
+        animation: 200,
+        group: "page-builder-group",
+        disabled: false,
+        ghostClass: "ghost"
+      };
+    });
+
     return {
       ...toRefs(state),
       content,
-      toggleBlockPanel,
       shouldAnimateDrop,
       moveUp,
       moveDown,
       openSettings,
       deleteBlock,
       changeLocale,
-      publish
+      publish,
+      // new
+      getBlockType,
+      dragOptions
     };
   },
   methods: {

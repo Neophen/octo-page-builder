@@ -1,0 +1,40 @@
+.oct-btn--primary {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  color: inherit;
+  text-align: center;
+
+  border: 2px solid var(--oct-primary);
+  @include oct-transition-all;
+
+  &.--large {
+    min-height: 2.5rem;
+    padding: 0.5rem 2rem;
+    width: 100%;
+    @media screen and (min-width: 700px) {
+      max-width: 16rem;
+      &.--full {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &.--small {
+    font-size: 0.875rem;
+    padding: 0.25rem 2rem;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background: var(--oct-primary--faded);
+  }
+
+  @include scanorama-btn(var(--oct-primary), black);
+
+  &:active {
+    color: black;
+    background: var(--oct-primary);
+  }
+}

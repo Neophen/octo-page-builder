@@ -2,17 +2,15 @@
 
 <Demo componentName="examples-top-bar-doc" />
 
-## Code
-```html
-```
+#### Code
 
-## props
+#### props
 
 |Name|Description|Type|Values|Default|
 |---|---|---|---|---|
 |**prop_name**|description|type|values|default|
 
-## slots
+#### slots
 
 |Name|Description|
 |---|---|

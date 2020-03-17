@@ -1,0 +1,311 @@
+.btn {
+  border: 2px solid var(--primary);
+  @include transition-all;
+  &:hover,
+  &:focus {
+    outline: none;
+    background: var(--primary--faded);
+  }
+  &:active {
+    color: black;
+    background: var(--primary);
+    .triangle {
+      border-color: transparent transparent black transparent;
+    }
+  }
+}
+
+.btn--primary {
+  display: block;
+  position: relative;
+  color: black;
+  text-align: center;
+
+  border: 2px solid var(--primary);
+  @include transition-all;
+
+  &.--large {
+    min-height: 2.5rem;
+    padding: 0.5rem 2rem;
+    width: 100%;
+    @media screen and (min-width: 700px) {
+      max-width: 16rem;
+      &.--full {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &.--small {
+    font-size: 0.875rem;
+    padding: 0.25rem 2rem;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background: var(--primary--faded);
+  }
+
+  &::after {
+    @include btn-triangle;
+  }
+
+  &:active {
+    color: black;
+    background: var(--primary);
+    &::after {
+      border-color: transparent transparent black transparent;
+    }
+  }
+}
+
+.btn--program-section {
+  position: relative;
+  color: black;
+  border: 2px solid black;
+  border-color: black;
+  min-height: 3.8em;
+  @include transition-all;
+  .triangle {
+    border-color: transparent transparent black transparent;
+    @include transition-all;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: var(--secondary);
+    background: var(--secondary--faded);
+  }
+  &:active,
+  &.active {
+    border-color: var(--secondary);
+    background: var(--secondary);
+  }
+}
+
+.btn--program-cover {
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  border: 2px solid black;
+  border-color: black;
+  @include transition-all;
+  .triangle {
+    border-color: transparent transparent white transparent;
+    @include transition-all;
+  }
+
+  &:active,
+  &.active,
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: var(--secondary);
+    .triangle {
+      border-color: transparent transparent var(--secondary) transparent;
+    }
+  }
+}
+
+.btn--list-item {
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  border: 2px solid black;
+  border-color: black;
+  @include transition-all;
+
+  .--photo-container {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    img {
+      @include transition-all;
+    }
+  }
+
+  .--highlight-text {
+    @include transition-all;
+  }
+
+  .triangle {
+    border-color: transparent transparent black transparent;
+    @include transition-all;
+  }
+
+  &:active,
+  &.active,
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: var(--secondary);
+    .triangle {
+      border-color: transparent transparent var(--secondary) transparent;
+    }
+
+    .--photo-container {
+      img {
+        transform: scale(1.2);
+      }
+    }
+
+    .--highlight-text {
+      color: var(--secondary);
+    }
+
+    .btn-add-heart {
+      opacity: 1;
+    }
+  }
+}
+
+.btn--play {
+  $button-size: 60px;
+  width: $button-size;
+  height: $button-size;
+  @include transition-all;
+  cursor: pointer;
+  .border {
+    fill: var(--primary);
+    @include transition-all;
+  }
+
+  .icon {
+    @include transition-all;
+    fill: white;
+  }
+  .bg {
+    @include transition-all;
+    fill: none;
+  }
+
+  &:hover,
+  &:focus {
+    .bg {
+      fill: var(--primary--faded);
+    }
+  }
+
+  &:active,
+  &.active {
+    .bg {
+      fill: var(--primary);
+    }
+    .icon {
+      fill: black;
+    }
+  }
+}
+
+.tooltip-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 6px 0 6px;
+  border-color: black transparent transparent transparent;
+}
+
+.absolute-center {
+  position: absolute;
+  left: calc(50% - 30px);
+  top: calc(50% - 30px);
+}
+
+.btn-text {
+  color: var(--secondary);
+
+  @include transition-all;
+  position: relative;
+  padding-right: 2px;
+  &::before {
+    content: "";
+    z-index: 0;
+    width: 0;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--secondary--faded);
+
+    @include transition-all;
+  }
+
+  &.--danger {
+    color: red;
+    &::before {
+      background-color: rgba($color: red, $alpha: 0.2);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    // color: black;
+    &::before {
+      content: "";
+      width: 100%;
+    }
+  }
+}
+
+.btn--section {
+  display: block;
+  position: relative;
+  color: black;
+  text-align: center;
+
+  border: 2px solid black;
+
+  min-height: 2.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+
+  @include transition-all;
+
+  &:focus {
+    @apply outline-none shadow-outline;
+  }
+
+  &::after {
+    @include btn-triangle;
+    border-color: transparent transparent black transparent;
+  }
+
+  &:hover {
+    outline: none;
+    border-color: var(--secondary);
+    background: var(--secondary--faded);
+    &::after {
+      border-color: transparent transparent var(--secondary) transparent;
+    }
+  }
+}
+
+.btn--screening {
+  @apply block relative text-white;
+  border: 2px solid var(--primary);
+  @include transition-all;
+
+  &:hover {
+    background: var(--primary--faded);
+  }
+
+  &:focus {
+    @apply shadow-outline;
+  }
+
+  &::after {
+    @include btn-triangle;
+  }
+
+  &:active {
+    color: black;
+    background: var(--primary);
+    &::after {
+      border-color: transparent transparent black transparent;
+    }
+  }
+}

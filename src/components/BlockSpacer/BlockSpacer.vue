@@ -1,7 +1,7 @@
 <template>
   <div :class="spacing" class="opb-block-spacer" @click="toggleSpacing">
     <div class="opb-block-spacer__info">
-      <o-icon icon="arrow-y" pack="opb" class="w-4 mr-4" />
+      <o-icon icon="arrow-y" pack="opb" class="opb-block-spacer__icon" />
       <o-text>Click to increase spacing</o-text>
     </div>
   </div>
@@ -59,10 +59,16 @@ export default {
     display: none;
   }
 
+  .opb-block-spacer__icon {
+    width: 1rem;
+    margin-right: 1rem;
+  }
+
   &:hover {
     background: rgba(24, 68, 224, 0.05);
-    border: 1px dashed #1844e0;
-    color: #1844e0;
+    // background: var(--octo-primary-200);
+    border: 1px dashed var(--octo-primary-500);
+    color: var(--octo-primary-500);
     .opb-block-spacer__info {
       display: flex;
       align-items: center;

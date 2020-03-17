@@ -1,0 +1,24 @@
+.co-openhagen-link {
+  > .icon {
+    width: 180px;
+  }
+
+  > .icon-active {
+    display: none;
+  }
+
+  > .icon-passive {
+    display: block;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    > .icon-active {
+      display: block;
+    }
+    > .icon-passive {
+      display: none;
+    }
+  }
+}

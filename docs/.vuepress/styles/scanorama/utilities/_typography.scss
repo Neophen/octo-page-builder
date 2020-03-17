@@ -1,0 +1,69 @@
+a,
+p {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.remove-last-first-last-margins {
+  > :first-child {
+    margin-top: 0 !important;
+  }
+  > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+.heading-page {
+  @include fluid-type(font-size, $min-screen, $max-screen, 30px, 40px);
+  @include fluid-type(line-height, $min-screen, $max-screen, 36px, 46px);
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 46px;
+  letter-spacing: 0;
+}
+
+.heading-2 {
+  @include fluid-type(font-size, $min-screen, $max-screen, 20px, 30px);
+  @include fluid-type(line-height, $min-screen, $max-screen, 26px, 36px);
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  // font-size: 30px;
+  // line-height: 36px;
+  letter-spacing: 0;
+}
+
+.heading-3 {
+  @include fluid-type(font-size, $min-screen, $max-screen, 16px, 20px);
+  @include fluid-type(line-height, $min-screen, $max-screen, 20px, 24px);
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  // font-size: 20px;
+  // line-height: 24px;
+  letter-spacing: 0;
+}
+
+.truncate-2-lines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-height: 24px; /* fallback */
+  height: 24px * 2; /* fallback */
+}
+
+// p,
+// a,
+// button,
+// input,
+// textarea,
+// ul,
+// li {
+//   font-size: 20px;
+//   line-height: 28px;
+// }
+
+.text-icons {
+  font-size: 16px;
+  line-height: 22px;
+}

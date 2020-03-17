@@ -1,0 +1,63 @@
+.oct-container {
+  max-width: 74.25rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+// container mx-auto md:flex flex-row-reverse
+
+/* Small (sm) */
+// @media (min-width: 640px) { /* ... */ }
+
+/* Medium (md) */
+// @media (min-width: 768px) { /* ... */ }
+
+/* Large (lg) */
+// @media (min-width: 1024px) { /* ... */ }
+
+/* Extra Large (xl) */
+// @media (min-width: 1280px) { /* ... */ }
+
+//       <div class="sm:flex flex-wrap -m-4">
+//         <div class="p-4 w-full sm:w-1/2">
+//           {{ partial:item-icons/item }}
+//         </div>
+//       </div>
+
+.oct-row {
+  flex-direction: row;
+
+  &.--reverse {
+    flex-direction: row-reverse;
+  }
+  
+  > :first-child {
+    margin-top: 0 !important;
+  }
+  > :last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .oct-col {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 3rem;
+    // &.left-block {
+    //   background: rgba(0, 255, 0, 0.3);
+    // }
+    // &.right-block {
+    //   background: rgba(255, 0, 0, 0.3);
+    // }
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    margin: 0 -1.5rem;
+    .oct-col {
+      width: 50%;
+      padding: 0 1.5rem;
+      margin-bottom: 0;
+    }
+  }
+}

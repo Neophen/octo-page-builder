@@ -12,7 +12,7 @@
           <!-- <oct-site-info /> -->
           <div class="oct-header__btn-container">
             <button type="button" class="__btn-play" id="playpause">
-              <icon icon="oct_media_play" />
+              <o-icon icon="oct_media_play" />
             </button>
           </div>
           <div class="oct-header__bottom">

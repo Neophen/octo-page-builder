@@ -1,0 +1,23 @@
+.opb-builder{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  .opb-content  {
+    // flex-1 overflow-y-scroll relative
+    flex: 1;
+    overflow-y: scroll;
+    position: relative;
+  }
+}
+
+
+.pointer-events-none {
+  pointer-events: none;
+}

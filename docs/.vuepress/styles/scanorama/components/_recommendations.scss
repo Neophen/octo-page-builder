@@ -1,0 +1,48 @@
+.recommendation-item {
+  min-width: 0;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  border: 2px solid black;
+  border-color: black;
+  @include transition-all;
+  &::after {
+    @include transition-all;
+    @include btn-triangle;
+    border-color: transparent transparent black transparent;
+  }
+
+  .--photo-container {
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    img {
+      @include transition-all;
+    }
+  }
+
+  .--highlight-text {
+    @include transition-all;
+  }
+
+  &:active,
+  &.active,
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: var(--secondary);
+    .--photo-container {
+      img {
+        transform: scale(1.2);
+      }
+    }
+
+    .--highlight-text {
+      color: var(--secondary);
+    }
+
+    &::after {
+      border-color: transparent transparent var(--secondary) transparent;
+    }
+  }
+}

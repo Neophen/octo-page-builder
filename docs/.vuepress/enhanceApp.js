@@ -3,6 +3,8 @@ import PortalVue from 'portal-vue';
 import OctoUI from '@mykolasm/octo-ui';
 import "@mykolasm/octo-ui/dist/octo-ui.css";
 
+import './styles/scanorama/app.scss';
+
 import OctoPageBuilder from '../../src/main.js';
 
 export default ({ Vue }) => {

@@ -1,0 +1,21 @@
+$min-font: 8px;
+$max-font: 10px;
+$min-screen: 600px;
+$max-screen: 1180px;
+
+:root {
+  --oct-primary: #f9e00c;
+  --oct-primary--faded: rgba(255, 242, 0, 0.5);
+
+  --oct-secondary: #27b67c;
+  --oct-secondary--faded: rgba(39, 182, 124, 0.5);
+
+  // --oct-muted-100:
+  --oct-muted-200: #edf2f7;
+  // --oct-muted-300:
+  --oct-muted-400: #cbd5e0;
+  --oct-muted-500: #a0aec0;
+  // --oct-muted-600:
+  --oct-muted-700: #4a5568;
+  // --oct-muted-800:
+}

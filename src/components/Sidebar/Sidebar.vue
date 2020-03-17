@@ -1,23 +1,35 @@
 <template>
-  <div class="opb-sidebar" :class="{ open: isPanelOpen }">
-    <div class="opb-sidebar__blocks">
-      <div
-        class="my-10 flex flex-col items-center justify-center text-center text-secondary"
-      >
-        <o-icon icon="cursor-drag" pack="opb" class="w-8 h-8 mb-3" />
-        <o-text type="secondary" size="xs"
+  <div class="opb-sidebar" :class="{ 'is-open': isPanelOpen }">
+    <div class="opb-sidebar__container">
+      <div class="opb-sidebar__info">
+        <o-icon icon="cursor-drag" pack="opb" size="is-xl" class=" mb-3" />
+        <o-text type="secondary" size="is-xs"
           >Drag &amp; drop components onto the page</o-text
         >
       </div>
       <o-collapse
-        v-for="(list, type) in blockList"
+        v-for="list in blockList"
         :open.sync="list.isOpen"
         :title="list.title"
         :aria-id="list.type"
         class="mb-4"
         :key="list.type"
       >
-        <Container
+        <!-- @change="log" -->
+        <draggable
+          class="opb-sidebar__drag-list"
+          :list="list.blocks"
+          :group="{ name: groupName, pull: 'clone', put: false }"
+          :sort="false"
+          ghost-class="opb-sidebar__drag-ghost"
+        >
+          <opb-sidebar-item
+            v-for="block in list.blocks"
+            :block="block"
+            :key="block.id"
+          />
+        </draggable>
+        <!-- <Container
           @drag-start="dragStart"
           @drag-end="onDragEnd"
           behaviour="copy"
@@ -33,19 +45,19 @@
           >
             <opb-sidebar-item :block="block" />
           </Draggable>
-        </Container>
+        </Container> -->
       </o-collapse>
     </div>
-    <div class="top-0 left-0 mt-10 z-10">
+    <div class="opb-sidebar__toggle">
       <button
-        class="opb-sidebar__toggle-btn focus:outline-none"
-        :class="{ open: isPanelOpen }"
+        class="opb-sidebar__toggle-btn"
+        :class="{ 'is-open': isPanelOpen }"
         @click="toggleBlockPanel"
       >
         <o-icon
           :icon="isPanelOpen ? 'close' : 'library'"
           pack="opb"
-          class="w-8 h-8"
+          class="opb-sidebar__toggle-icon w-8 h-8"
         />
       </button>
     </div>
@@ -54,6 +66,7 @@
 
 <script>
 import { toRefs, reactive } from "@vue/composition-api";
+import draggable from "vuedraggable";
 
 import { sidebarItems } from "../../utils/sidebar-items.js";
 
@@ -61,7 +74,7 @@ import SidebarItem from "./SidebarItem.vue";
 
 export default {
   name: "OpbSidebar",
-  components: { [SidebarItem.name]: SidebarItem },
+  components: { [SidebarItem.name]: SidebarItem, draggable },
   props: {
     groupName: {
       type: String,
