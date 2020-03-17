@@ -1,5 +1,7 @@
 <template>
-  <octo-page-builder :page="page"></octo-page-builder>
+  <ClientOnly>
+    <octo-page-builder :page="page"></octo-page-builder>
+  </ClientOnly>
 </template>
 
 <script>
@@ -78,7 +80,7 @@ export default {
                 in_nav_id: null,
                 in_nav_title: null
               },
-              getData: null,
+              getData: null
             }
           ],
           lt: []
