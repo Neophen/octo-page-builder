@@ -16,8 +16,7 @@ module.exports = {
       "@popperjs/core",
       "core-js",
       "portal-vue",
-      "@mykolasm/octo-ui",
-      "vee-validate"
+      "@mykolasm/octo-ui"
     ]
   }
 };

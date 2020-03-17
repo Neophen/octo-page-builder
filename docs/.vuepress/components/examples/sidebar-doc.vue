@@ -1,7 +1,7 @@
 <template>
   <div class="control-box">
-    <o-h size="3" class="mb-2">Sample</o-h>
-    <opb-sample v-model="valueSample">Sample</opb-sample>
+    <o-h size="3" class="mb-2">Sidebar</o-h>
+    <opb-sidebar v-model="valueSidebar">Sidebar</opb-sidebar>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import { reactive, toRefs } from "@vue/composition-api";
 export default {
   setup() {
     const state = reactive({
-      valueSample: false
+      valueSidebar: false
     });
 
     return { ...toRefs(state) };

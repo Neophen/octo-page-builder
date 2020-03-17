@@ -1,8 +1,8 @@
-# octo-form
+# octo-page-builder
 
 ## Docs
 
-[octo-form.com](https://octo-form.netlify.com/)
+[octo-page-builder.com](https://octo-page-builder.netlify.com/)
 
 ## Project setup
 ```

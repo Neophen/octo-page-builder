@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: "OpbSample",
+  name: "OpbBlockLayout"
 };
 </script>

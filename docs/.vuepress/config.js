@@ -38,6 +38,13 @@ module.exports = {
               title: 'Components',
               collapsable: false,
               children: [
+                'block-spacer',
+                'block-layout',
+                'block-settings',
+                'sidebar-item',
+                'top-bar',
+                'sidebar',
+                'page-builder',
               ]
             }
           ]
