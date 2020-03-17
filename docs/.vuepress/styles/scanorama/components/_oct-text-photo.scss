@@ -32,6 +32,7 @@
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+  height: fit-content;
 
   .oct-text-icons__icon {
     width: 40px;

@@ -12,13 +12,14 @@
         :style="contentStyle"
         v-model="content"
         v-bind="dragOptions"
+        handle=".opb-drag-handle"
         @start="drag = true"
         @end="drag = false"
       >
         <transition-group type="transition" :name="!drag ? 'flip-list' : null">
           <div class="draggable-item" v-for="block in content" :key="block.id">
             <component
-              :class="{ 'pointer-events-none': disablePointerEvents }"
+              :class="{ 'pointer-events-none': drag }"
               :is="getBlockType(block)"
               v-model="block.getData"
               :block="block"
@@ -74,9 +75,23 @@ export default {
     });
 
     const content = computed({
-      get: () => state.allPageContent[state.currentLocale],
+      get: () => {
+        if (state.allPageContent[state.currentLocale].length === 0) {
+          return [
+            {
+              id: "empty",
+              type: "empty",
+              getData: null,
+              highlight: true
+            }
+          ];
+        }
+        return state.allPageContent[state.currentLocale];
+      },
       set: content => {
-        state.allPageContent[state.currentLocale] = content;
+        state.allPageContent[state.currentLocale] = content.filter(
+          item => item.id !== "empty"
+        );
       }
     });
 
@@ -112,11 +127,9 @@ export default {
 
     // const updateDataForLocale = locale => {
     const updateDataForLocale = () => {
-      const data = content.value.map(block => {
-        // console.log(block);
+      const data = state.allPageContent[state.currentLocale].map(block => {
         return block.getData();
       });
-      // console.log(data);
       state.allPageContent[state.currentLocale] = data;
     };
 
@@ -149,7 +162,8 @@ export default {
         animation: 200,
         group: "page-builder-group",
         disabled: false,
-        ghostClass: "ghost"
+        ghostClass: "ghost",
+        emptyInsertThreshold: 200
       };
     });
 
@@ -195,53 +209,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-.draggable-item {
-  box-sizing: border-box;
-  border: 1px solid transparent;
-  position: relative;
-  .block-settings-container {
-    display: none;
-  }
-
-  &:hover,
-  &:focus {
-    border: 1px dashed black;
-    .block-settings-container {
-      display: block;
-    }
-  }
-}
-
-.empty-content {
-  height: 300px;
-  border: 1px dashed black;
-  background: transparent;
-  pointer-events: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.content-container {
-  &:empty {
-    height: 300px;
-  }
-}
-
-.drop-preview {
-  background-color: rgba(150, 150, 200, 0.1);
-  border: 1px dashed #abc;
-}
-
-.transparent-input {
-  background: transparent;
-  color: inherit;
-  width: 100%;
-}
-</style>

@@ -33,6 +33,16 @@
     text-align: center;
     color: var(--octo-text-muted);
     margin: 2.5rem 0;
+
+    * + * {
+      margin-top: 1rem;
+    }
+  }
+
+  .opb-sidebar__collapse {
+    + .opb-sidebar__collapse {
+      margin-top: 1rem;
+    }
   }
 }
 

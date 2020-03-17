@@ -29,3 +29,61 @@
 .pointer-events-none {
   pointer-events: none;
 }
+
+
+.opb-block-empty {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .opb-block-empty__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--octo-muted-500);
+
+    * + * {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.opb-block-settings {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 1rem;
+  margin-right: 3rem;
+  display: flex;
+  align-items: center;
+
+  * + * {
+    margin-left: 1rem;
+  }
+}
+
+// old .opb-page-builder
+.draggable-item {
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  position: relative;
+  .opb-block-settings {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px dashed black;
+    .opb-block-settings {
+      display: flex;
+    }
+  }
+}
+
+
+.transparent-input {
+  background: transparent;
+  color: inherit;
+  width: 100%;
+}

@@ -3,7 +3,7 @@
     <div class="opb-sidebar__container">
       <div class="opb-sidebar__info">
         <o-icon icon="cursor-drag" pack="opb" size="is-xl" class=" mb-3" />
-        <o-text type="secondary" size="is-xs"
+        <o-text type="is-inherit" size="is-xs"
           >Drag &amp; drop components onto the page</o-text
         >
       </div>
@@ -12,7 +12,7 @@
         :open.sync="list.isOpen"
         :title="list.title"
         :aria-id="list.type"
-        class="mb-4"
+        class="opb-sidebar__collapse"
         :key="list.type"
       >
         <!-- @change="log" -->

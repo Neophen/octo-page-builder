@@ -32,19 +32,17 @@ module.exports = {
           { text: 'Page Builder', link: '/components/page-builder' },
           { text: 'GitHub', link: 'https://github.com/Neophen/octo-page-builder' }
         ],
-        // sidebar: {
-        //   '/components/': [
-        //     {
-        //       title: 'Components',
-        //       collapsable: false,
-        //       children: [
-        //         'top-bar',
-        //         'sidebar',
-        //         'page-builder',
-        //       ]
-        //     }
-        //   ]
-        // }
+        sidebar: {
+          '/components/': [
+            {
+              title: 'Components',
+              collapsable: false,
+              children: [
+                'page-builder',
+              ]
+            }
+          ]
+        }
       }
     }
   }

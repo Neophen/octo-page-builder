@@ -29,3 +29,4 @@ export { OpbSidebarItem, OpbSidebar } from "./Sidebar";
 export { default as BlockSettings } from "./BlockSettings";
 export { default as BlockLayout } from "./BlockLayout";
 export { default as BlockSpacer } from "./BlockSpacer";
+export { default as BlockEmpty } from "./BlockEmpty";

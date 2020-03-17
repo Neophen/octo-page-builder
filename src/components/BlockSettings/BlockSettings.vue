@@ -3,39 +3,36 @@
     <o-button
       size="is-sm"
       icon="cursor-drag"
-      pack="opb"
+      icon-pack="opb"
       @click.stop
-      class="btn-m content-drag-handle"
+      class="btn-m opb-drag-handle"
     />
     <o-button
       :disabled="index === 0"
-      class="btn-m"
       size="is-sm"
       icon="arrow"
-      dir="up"
-      pack="opb"
+      icon-dir="up"
+      icon-pack="opb"
       @click.stop="$emit('move-up', index)"
     />
 
     <o-button
       :disabled="index + 1 === maxIndex"
-      class="btn-m"
       size="is-sm"
       @click.stop="$emit('move-down', index)"
       icon="arrow"
-      dir="down"
-      pack="opb"
+      icon-dir="down"
+      icon-pack="opb"
     />
     <!-- <v-popover
       v-if="showSettings"
       trigger="click"
-      class="btn-m"
       placement="bottom"
       popoverClass="--select"
       offset="16"
     >
       <o-button size="is-sm" class="tooltip-target">
-        <o-icon icon="gear" pack="opb" size="is-sm" />
+        <o-icon icon="gear" icon-pack="opb" size="is-sm" />
       </o-button>
       <template slot="popover">
         <div class="bg-white">
@@ -49,57 +46,43 @@
       type="is-danger"
       @click.stop="$emit('delete', index)"
       icon="trash"
-      pack="opb"
+      icon-pack="opb"
     />
   </div>
 </template>
 
 <script>
-import { computed } from "@vue/composition-api";
+// import { computed } from "@vue/composition-api";
 
 export default {
   name: "OpbBlockSettings",
   props: {
     index: {
       type: Number,
-      required: true
+      default: 1
     },
     maxIndex: {
       type: Number,
-      required: true
+      default: 10
     },
     content: {
-      type: Array,
-      required: true
+      type: Array
     },
     block: {
-      type: Object,
-      required: true
+      type: Object
     }
   },
-  setup(props) {
-    const showSettings = computed(() => {
-      if (
-        props.block.type === "header-media" ||
-        props.block.type === "header-simple"
-      ) {
-        return false;
-      }
-
-      return props.content.find(block => block.type === "header-media");
-    });
-
-    return { showSettings };
+  setup() {
+    // const showSettings = computed(() => {
+    //   if (
+    //     props.block.type === "header-media" ||
+    //     props.block.type === "header-simple"
+    //   ) {
+    //     return false;
+    //   }
+    //   return props.content.find(block => block.type === "header-media");
+    // });
+    // return { showSettings };
   }
 };
 </script>
-
-<style lang="scss">
-.opb-block-settings {
-  display: flex;
-  align-items: center;
-  .btn-m {
-    margin-right: 15px;
-  }
-}
-</style>

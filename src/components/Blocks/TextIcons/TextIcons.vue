@@ -56,7 +56,7 @@
         </div>
         <div>
           <o-icon
-            icon="culture"
+            icon="cities"
             pack="icons_site"
             class="oct-text-icons__icon"
           />
@@ -69,7 +69,7 @@
         </div>
         <div>
           <o-icon
-            icon="film-titles"
+            icon="established"
             pack="icons_site"
             class="oct-text-icons__icon"
           />

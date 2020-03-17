@@ -52,6 +52,7 @@
         <o-button type="is-dashed" @click="addButton">add button</o-button> -->
       </div>
     </div>
+    <opb-block-settings :block="block" />
     <opb-block-spacer v-model="spacer" />
   </opb-block-layout>
 </template>
