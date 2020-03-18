@@ -1,7 +1,15 @@
 <template>
+<div>
+
   <ClientOnly>
     <octo-page-builder :page="page"></octo-page-builder>
   </ClientOnly>
+
+<!-- <div class="docs-debug-content">
+  <pre>{{ JSON.stringify(page, null, 2) }}</pre>
+</div> -->
+</div>
+
 </template>
 
 <script>
@@ -94,3 +102,19 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" >
+.docs-debug-content
+{
+  width: 600px;
+  height: calc(100vh - 67px);
+  position: absolute;
+  top:67px;
+  right: 0;
+  overflow-y: scroll;
+  padding: 1rem;
+  background-color: rgba($color: #000000, $alpha: 0.7);
+  // pointer-events: none;
+  color: white;
+}
+</style>
