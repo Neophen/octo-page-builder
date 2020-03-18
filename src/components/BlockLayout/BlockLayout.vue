@@ -36,7 +36,7 @@ export default {
 
 <style lang="scss">
 .opb-show-highlight {
-  animation: opb-pulse-color 0.5s;
+  animation: opb-pulse-color 0.5s ease-out;
 }
 
 @keyframes opb-pulse-color {

@@ -62,6 +62,20 @@ export default {
       emit("exit");
     };
 
+    // EXAMPLE OF HOW TO OPEN PREVIEW
+    //  const openMobile = async () => {
+    //   const height = screen.height;
+    //   const left = Math.round(screen.width / 2 - 320);
+    //   const win = await window.open(
+    //     'https://scanorama.octafest.test',
+    //     'mobile-preview',
+    //     `menubar=0,resizable=1,left=${left},width=640,height=${height}`,
+    //   );
+    //   if (win) {
+    //     win.moveTo(0, 0);
+    //   }
+    // };
+
     watch(
       () => state.currentLocale,
       locale => {
