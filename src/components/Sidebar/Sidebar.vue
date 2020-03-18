@@ -15,7 +15,6 @@
         class="opb-sidebar__collapse"
         :key="list.type"
       >
-        <!-- @change="log" -->
         <draggable
           class="opb-sidebar__drag-list"
           :list="list.blocks"
