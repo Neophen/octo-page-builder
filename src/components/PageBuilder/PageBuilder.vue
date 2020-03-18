@@ -126,15 +126,11 @@ export default {
       }
     };
 
-    // const openSettings = index => {
-    const openSettings = () => {};
-
     const deleteBlock = block => {
-      console.log("delete: ", block.id);
       content.value = content.value.filter(b => b.id !== block.id);
     };
 
-    // const updateDataForLocale = locale => {
+    // TODO rework this to maybe v-model?
     const updateDataForLocale = () => {
       const data = state.allPageContent[state.currentLocale].map(block => {
         return block.getData();
@@ -181,7 +177,6 @@ export default {
       content,
       moveUp,
       moveDown,
-      openSettings,
       deleteBlock,
       changeLocale,
       publish,
