@@ -13,13 +13,13 @@
       icon="arrow"
       icon-dir="up"
       icon-pack="opb"
-      @click.stop="$emit('move-up', index)"
+      @click.stop="$emit('move-up')"
     />
 
     <o-button
       :disabled="index + 1 === maxIndex"
       size="is-sm"
-      @click.stop="$emit('move-down', index)"
+      @click.stop="$emit('move-down')"
       icon="arrow"
       icon-dir="down"
       icon-pack="opb"
@@ -44,7 +44,7 @@
       inverted
       size="is-sm"
       type="is-danger"
-      @click.stop="$emit('delete', index)"
+      @click.stop="$emit('delete')"
       icon="trash"
       icon-pack="opb"
     />
@@ -70,19 +70,11 @@ export default {
     },
     block: {
       type: Object
+    },
+    showSettings: {
+      type: Boolean,
+      default: true
     }
-  },
-  setup() {
-    // const showSettings = computed(() => {
-    //   if (
-    //     props.block.type === "header-media" ||
-    //     props.block.type === "header-simple"
-    //   ) {
-    //     return false;
-    //   }
-    //   return props.content.find(block => block.type === "header-media");
-    // });
-    // return { showSettings };
   }
 };
 </script>

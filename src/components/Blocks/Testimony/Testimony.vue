@@ -1,6 +1,24 @@
 <template>
   <opb-block-layout :highlight="highlight">
-    <div>This block needs to be finished</div>
+    <div class="opb-block-empty">
+      <div class="opb-block-empty__content">
+        <o-icon icon="warning" pack="opb" size="is-xl" />
+        <o-text type="is-inherit" size="is-semi">
+          Testimony
+        </o-text>
+        <o-text type="is-inherit" size="is-xs"
+          >This block needs to be finished</o-text
+        >
+      </div>
+    </div>
+    <opb-block-settings
+      :block="block"
+      :index="index"
+      :max-index="maxIndex"
+      @delete="$emit('delete', block)"
+      @move-up="$emit('move-up', index)"
+      @move-down="$emit('move-down', index)"
+    />
     <opb-block-spacer v-model="spacer" />
   </opb-block-layout>
 </template>
@@ -12,16 +30,12 @@ export default {
   name: "OpbBlockTestimony",
 
   props: {
-    highlight: {
-      type: Boolean,
-      default: false
-    },
-    block: {
-      type: Object,
-      required: true
-    },
+    highlight: Boolean,
+    block: Object,
     locale: String,
-    getDataValue: null
+    getDataValue: null,
+    index: Number,
+    maxIndex: Number
   },
   model: {
     prop: "getDataValue",

@@ -2,7 +2,7 @@
   <div class="opb-sidebar" :class="{ 'is-open': isPanelOpen }">
     <div class="opb-sidebar__container">
       <div class="opb-sidebar__info">
-        <o-icon icon="cursor-drag" pack="opb" size="is-xl" class=" mb-3" />
+        <o-icon icon="cursor-drag" pack="opb" size="is-xl" class="mb-3" />
         <o-text type="is-inherit" size="is-xs"
           >Drag &amp; drop components onto the page</o-text
         >
@@ -20,7 +20,10 @@
           class="opb-sidebar__drag-list"
           :list="list.blocks"
           :group="{ name: groupName, pull: 'clone', put: false }"
+          :clone="clone"
           :sort="false"
+          @start="dragStart"
+          @end="dragEnd"
           ghost-class="opb-sidebar__drag-ghost"
         >
           <opb-sidebar-item
@@ -29,23 +32,6 @@
             :key="block.id"
           />
         </draggable>
-        <!-- <Container
-          @drag-start="dragStart"
-          @drag-end="onDragEnd"
-          behaviour="copy"
-          :group-name="groupName"
-          drag-class="opb-sidebar__drag-ghost"
-          :get-child-payload="index => getBlockPayload(type, index)"
-          class="flex flex-wrap -mx-2"
-        >
-          <Draggable
-            v-for="block in list.blocks"
-            :key="block.id"
-            class="px-2 pb-4 w-1/2"
-          >
-            <opb-sidebar-item :block="block" />
-          </Draggable>
-        </Container> -->
       </o-collapse>
     </div>
     <div class="opb-sidebar__toggle">
@@ -92,17 +78,28 @@ export default {
     };
 
     const dragStart = () => emit("drag-start");
-    const onDragEnd = () => emit("drag-end");
+    const dragEnd = () => emit("drag-end");
 
-    const getBlockPayload = (type, index) =>
-      state.blockList[type].blocks[index];
+    const generateID = () =>
+      (
+        Date.now().toString(36) +
+        Math.random()
+          .toString(36)
+          .substr(2, 5)
+      )
+        .toUpperCase()
+        .toLowerCase();
+
+    const clone = item => {
+      return { ...item, id: `${item.id}-${generateID()}` };
+    };
 
     return {
       ...toRefs(state),
       toggleBlockPanel,
       dragStart,
-      onDragEnd,
-      getBlockPayload
+      dragEnd,
+      clone
     };
   }
 };

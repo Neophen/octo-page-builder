@@ -65,16 +65,12 @@ import { reactive, toRefs, onMounted } from "@vue/composition-api";
 export default {
   name: "OpbBlockHeaderMedia",
   props: {
-    highlight: {
-      type: Boolean,
-      default: false
-    },
-    block: {
-      type: Object,
-      required: true
-    },
+    highlight: Boolean,
+    block: Object,
     locale: String,
-    getDataValue: null
+    getDataValue: null,
+    index: Number,
+    maxIndex: Number
   },
   model: {
     prop: "getDataValue",

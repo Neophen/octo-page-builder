@@ -73,6 +73,14 @@
         </div>
       </div>
     </div>
+    <opb-block-settings
+      :block="block"
+      :index="index"
+      :max-index="maxIndex"
+      @delete="$emit('delete', block)"
+      @move-up="$emit('move-up', index)"
+      @move-down="$emit('move-down', index)"
+    />
     <opb-block-spacer v-model="spacer" />
   </opb-block-layout>
 </template>
@@ -83,16 +91,12 @@ import { reactive, toRefs, onMounted } from "@vue/composition-api";
 export default {
   name: "OpbBlockTextIcons",
   props: {
-    highlight: {
-      type: Boolean,
-      default: false
-    },
-    block: {
-      type: Object,
-      required: true
-    },
+    highlight: Boolean,
+    block: Object,
     locale: String,
-    getDataValue: null
+    getDataValue: null,
+    index: Number,
+    maxIndex: Number
   },
   model: {
     prop: "getDataValue",

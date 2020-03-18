@@ -52,7 +52,14 @@
         <o-button type="is-dashed" @click="addButton">add button</o-button> -->
       </div>
     </div>
-    <opb-block-settings :block="block" />
+    <opb-block-settings
+      :block="block"
+      :index="index"
+      :max-index="maxIndex"
+      @delete="$emit('delete', block)"
+      @move-up="$emit('move-up', index)"
+      @move-down="$emit('move-down', index)"
+    />
     <opb-block-spacer v-model="spacer" />
   </opb-block-layout>
 </template>
@@ -61,10 +68,12 @@
 export default {
   name: "OpbBlockTextImage",
   props: {
-    highlight: null,
-    block: null,
+    highlight: Boolean,
+    block: Object,
     locale: String,
-    getDataValue: null
+    getDataValue: null,
+    index: Number,
+    maxIndex: Number
   },
   model: {
     prop: "getDataValue",
@@ -110,7 +119,6 @@ export default {
         }
       };
     }
-  },
-  setup() {}
+  }
 };
 </script>

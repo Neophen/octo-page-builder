@@ -13,19 +13,31 @@
         v-model="content"
         v-bind="dragOptions"
         handle=".opb-drag-handle"
-        @start="drag = true"
-        @end="drag = false"
+        @start="dragStart"
+        @end="dragEnd"
       >
-        <transition-group type="transition" :name="!drag ? 'flip-list' : null">
-          <div class="draggable-item" v-for="block in content" :key="block.id">
+        <transition-group
+          type="transition"
+          :name="!isDragging ? 'flip-list' : null"
+        >
+          <div
+            class="draggable-item"
+            v-for="(block, i) in content"
+            :key="block.id"
+          >
             <component
-              :class="{ 'pointer-events-none': drag }"
+              :class="{ 'pointer-events-none': isDragging }"
               :is="getBlockType(block)"
               v-model="block.getData"
               :block="block"
               :locale="currentLocale"
               :highlight="block.highlight"
               :key="block.id"
+              :index="i"
+              :max-index="content.length"
+              @delete="deleteBlock"
+              @move-up="moveUp"
+              @move-down="moveDown"
             />
           </div>
         </transition-group>
@@ -34,7 +46,7 @@
     <opb-sidebar
       group-name="page-builder-group"
       @drag-start="dragStart"
-      @drag-end="onDragEnd"
+      @drag-end="dragEnd"
     />
   </div>
 </template>
@@ -57,8 +69,7 @@ export default {
   },
   setup(props, { emit }) {
     const state = reactive({
-      drag: false,
-      disablePointerEvents: false,
+      isDragging: false,
       loaded: false,
       contentWidth: "100%",
       iframe: {
@@ -96,7 +107,6 @@ export default {
     });
 
     const moveUp = index => {
-      // console.log("move up: ", index);
       const sortArray = [...content.value];
       if (index > 0) {
         const movingBlock = sortArray[index];
@@ -107,7 +117,6 @@ export default {
     };
 
     const moveDown = index => {
-      // console.log("move down: ", index);
       const sortArray = [...content.value];
       if (index < sortArray.length - 1) {
         const movingBlock = sortArray[index];
@@ -120,9 +129,9 @@ export default {
     // const openSettings = index => {
     const openSettings = () => {};
 
-    const deleteBlock = index => {
-      // console.log("delete: ", index);
-      content.value = content.value.filter((block, i) => i !== index);
+    const deleteBlock = block => {
+      console.log("delete: ", block.id);
+      content.value = content.value.filter(b => b.id !== block.id);
     };
 
     // const updateDataForLocale = locale => {
@@ -149,31 +158,23 @@ export default {
       return `opb-block-${block.type}`;
     });
 
-    // const iframeSrc = computed(() => {
-    //   if (state.refEditor && state.refIframe) {
-    //     console.log(state.refEditor);
-    //     return state.refEditor;
-    //   }
-    //   return "about:blank";
-    // });
-
     const dragOptions = computed(() => {
       return {
         animation: 200,
         group: "page-builder-group",
         disabled: false,
-        ghostClass: "ghost",
-        emptyInsertThreshold: 200
+        ghostClass: "ghost"
       };
     });
-
-    // iframe shit
 
     const contentStyle = computed(() => `width: ${state.contentWidth};`);
 
     const changeWidth = width => {
       state.contentWidth = width;
     };
+
+    const dragStart = () => (state.isDragging = true);
+    const dragEnd = () => (state.isDragging = false);
 
     return {
       ...toRefs(state),
@@ -184,28 +185,14 @@ export default {
       deleteBlock,
       changeLocale,
       publish,
+      dragStart,
+      dragEnd,
       // new
       getBlockType,
       dragOptions,
       contentStyle,
       changeWidth
     };
-  },
-  methods: {
-    dragStart() {
-      this.disablePointerEvents = true;
-    },
-    // onDrop(dropResult) {
-    onDrop() {
-      this.disablePointerEvents = false;
-      // this.content = applyDrag(this.content, dropResult, this.currentLocale);
-    },
-    onDragEnd() {
-      this.disablePointerEvents = false;
-    },
-    getContentPayload(index) {
-      return this.content[index];
-    }
   }
 };
 </script>
