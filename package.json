@@ -22,7 +22,6 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name octo-page-builder src/main.js",
-    "prepublishOnly": "$npm_execpath run build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "docs:dev": "vuepress dev docs",
