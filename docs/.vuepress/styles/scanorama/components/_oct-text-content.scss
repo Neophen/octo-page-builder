@@ -1,27 +1,33 @@
-.oct-p {
+a,
+p,
+.oct-p,
+.oct-a,
+.oct-ul {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
 }
-.oct-h1 {
-  @include fluid-type(font-size, $min-screen, $max-screen, 30px, 40px);
-  @include fluid-type(line-height, $min-screen, $max-screen, 36px, 46px);
+
+.oct-h1,
+.oct-h2,
+.oct-h3 {
   font-family: "Fira Sans", sans-serif;
   font-weight: 600;
   letter-spacing: 0;
+}
+
+.oct-h1 {
+  @include fluid-type(font-size, $min-screen, $max-screen, 30px, 40px);
+  @include fluid-type(line-height, $min-screen, $max-screen, 36px, 46px);
 }
 
 .oct-h2 {
   @include fluid-type(font-size, $min-screen, $max-screen, 20px, 30px);
   @include fluid-type(line-height, $min-screen, $max-screen, 26px, 36px);
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0;
 }
 
 .oct-h3 {
   @include fluid-type(font-size, $min-screen, $max-screen, 16px, 20px);
   @include fluid-type(line-height, $min-screen, $max-screen, 20px, 24px);
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0;
 }
 
 .oct-ul {

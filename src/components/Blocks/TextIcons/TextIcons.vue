@@ -33,33 +33,25 @@
           pagarbą kino istorijai.
         </p>
       </div>
-      <div class="oct-text-icons__icons">
-        <div>
+      <div class="oct-text-icons">
+        <div class="oct-text-icon">
           <o-icon
             icon="established"
             pack="icons_site"
-            class="oct-text-icons__icon"
+            class="oct-text-icon__icon"
           />
           <div class="oct-hr"></div>
           <h3 class="oct-h3 oct-mb-1">Nuo 2003 metų</h3>
           <p class="oct-p">Vienas seniausių kino festivalių Lietuvoje</p>
         </div>
-        <div>
-          <o-icon
-            icon="cities"
-            pack="icons_site"
-            class="oct-text-icons__icon"
-          />
+        <div class="oct-text-icon">
+          <o-icon icon="cities" pack="icons_site" class="oct-text-icon__icon" />
           <div class="oct-hr"></div>
           <h3 class="oct-h3 oct-mb-1">4 Lietuvos miestai</h3>
           <p class="oct-p">Vilnius, Kaunas, Klaipėda, Šiauliai</p>
         </div>
-        <div>
-          <o-icon
-            icon="cities"
-            pack="icons_site"
-            class="oct-text-icons__icon"
-          />
+        <div class="oct-text-icon">
+          <o-icon icon="cities" pack="icons_site" class="oct-text-icon__icon" />
           <div class="oct-hr"></div>
           <h3 class="oct-h3 oct-mb-1">Kultūra ir edukacija</h3>
           <p class="oct-p">
@@ -67,11 +59,11 @@
             su kino kūrėjais
           </p>
         </div>
-        <div>
+        <div class="oct-text-icon">
           <o-icon
             icon="established"
             pack="icons_site"
-            class="oct-text-icons__icon"
+            class="oct-text-icon__icon"
           />
           <div class="oct-hr"></div>
           <h3 class="oct-h3 oct-mb-1">Per 100 filmų kasmet</h3>
