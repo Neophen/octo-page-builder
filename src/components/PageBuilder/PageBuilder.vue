@@ -4,6 +4,7 @@
       :page="page"
       @change-locale="changeLocale"
       @publish="publish"
+      @exit="exit"
       @change-width="changeWidth"
     />
     <div class="opb-content">
@@ -150,6 +151,8 @@ export default {
       emit("submit", content);
     };
 
+    const exit = () => emit("exit");
+
     const getBlockType = computed(() => block => {
       return `opb-block-${block.type}`;
     });
@@ -180,6 +183,7 @@ export default {
       deleteBlock,
       changeLocale,
       publish,
+      exit,
       dragStart,
       dragEnd,
       // new
