@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ 'opb-show-highlight': showHighlight }">
+  <div :class="{ 'opb-highlight-block': showHighlight }">
     <slot />
   </div>
 </template>
@@ -33,21 +33,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-.opb-show-highlight {
-  animation: opb-pulse-color 0.5s ease-out;
-}
-
-@keyframes opb-pulse-color {
-  0% {
-    background: white;
-  }
-  50% {
-    background: rgba(30, 65, 241, 0.1);
-  }
-  100% {
-    background: white;
-  }
-}
-</style>

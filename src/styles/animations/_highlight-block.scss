@@ -1,0 +1,15 @@
+.opb-highlight-block {
+  animation: opb-pulse-color 0.5s ease-out;
+}
+
+@keyframes opb-pulse-color {
+  0% {
+    background: white;
+  }
+  50% {
+    background: rgba(30, 65, 241, 0.1);
+  }
+  100% {
+    background: white;
+  }
+}

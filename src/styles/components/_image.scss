@@ -1,4 +1,4 @@
-.octo-image {
+.opb-image {
   position: relative;
   width: 100%;
 
@@ -6,7 +6,7 @@
     box-sizing: border-box;
   }
 
-  .octo-avatar__placeholder-image {
+  .opb-avatar__placeholder-image {
     width: 4rem;
     height: 4rem;
     margin-bottom: 1.25rem;
@@ -14,38 +14,38 @@
     margin-right: auto;
   }
 
-  .octo-avatar__placeholder-label {
+  .opb-avatar__placeholder-label {
     text-decoration: underline;
   }
 
-  .octo-croppa-container {
+  .opb-croppa-container {
     box-shadow: var(--octo-shadow-idle);
     border-radius: var(--octo-radius-default);
     border: 1px dashed black;
     overflow: hidden;
     font-size: 0 !important;
     cursor: pointer;
-    .octo-avatar__placeholder {
+    .opb-avatar__placeholder {
       color: var(--octo-text-default);
       font-size: 18px !important;
     }
   }
 
   .has-file {
-    .octo-croppa-container {
+    .opb-croppa-container {
       border: 1px solid black;
     }
   }
 
-  .octo-croppa-container:hover {
+  .opb-croppa-container:hover {
     box-shadow: var(--octo-shadow-focus);
     border-color: var(--octo-primary-500);
-    .octo-avatar__placeholder {
+    .opb-avatar__placeholder {
       color: var(--octo-primary-500);
     }
   }
 
-  .octo-avatar__change-container {
+  .opb-avatar__change-container {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -54,14 +54,14 @@
     margin-left: 0.5rem;
     display: flex;
 
-    .octo-avatar__focus-btn {
+    .opb-avatar__focus-btn {
       margin-left: 0.5rem;
     }
   }
 }
 
 
-.octo-image__focus-target {
+.opb-image__focus-target {
   position: absolute;
   pointer-events: none;
   transition: all 0.1s;

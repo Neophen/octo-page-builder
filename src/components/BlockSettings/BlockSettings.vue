@@ -5,7 +5,7 @@
       icon="cursor-drag"
       icon-pack="opb"
       @click.stop
-      class="btn-m opb-drag-handle"
+      class="opb-drag-handle"
     />
     <o-button
       :disabled="index === 0"
