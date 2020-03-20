@@ -151,7 +151,9 @@ export default {
       emit("submit", content);
     };
 
-    const exit = () => emit("exit");
+    const exit = () => {
+      emit("exit");
+    };
 
     const getBlockType = computed(() => block => {
       return `opb-block-${block.type}`;
