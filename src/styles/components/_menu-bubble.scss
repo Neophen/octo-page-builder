@@ -1,0 +1,48 @@
+.menu-bubble {
+  position: absolute;
+  z-index: 20;
+  transform: translateX(-50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.menu-bubble__card {
+  background: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+.menu-bubble__btn {
+  width: 37px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .menu-bubble_icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  &:focus {
+    outline: 0;
+    // @apply shadow-positive;
+  }
+
+  &:hover {
+    background: #ececec;
+  }
+
+  &.--active {
+    background: var(--octo-primary-500);
+    color: var(--octo-text-inverted);
+    &:hover {
+      background: #2757ff;
+    }
+  }
+}
